@@ -107,7 +107,7 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
   -webkit-font-smoothing: antialiased;
 }
@@ -3568,13 +3568,13 @@ button {
   /* Kalender & Serie auf Smartphones */
   .streak-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 20px;
   }
 
   .fanned-showcase-container {
     max-width: 310px;
-    height: 460px;
-    margin-bottom: 28px;
+    height: 420px;
+    margin-bottom: 8px;
   }
 
   .fanned-phone {
@@ -4006,8 +4006,8 @@ button {
 
   .fanned-showcase-container {
     max-width: 280px;
-    height: 420px;
-    margin-bottom: 24px;
+    height: 388px;
+    margin-bottom: 4px;
   }
 
   .fanned-phone {
@@ -4044,39 +4044,6 @@ button {
 }
 
 
-/* ==========================================================================
-   Sticky Floating Daumenzone-CTA (Mobile & Tablet)
-   ========================================================================== */
-.floating-cta-pill {
-  position: fixed;
-  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-  left: 16px;
-  right: 16px;
-  max-width: 420px;
-  margin: 0 auto;
-  z-index: 990;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1.5px solid rgba(194, 58, 43, 0.18);
-  border-radius: 24px;
-  box-shadow: 0 12px 32px rgba(31, 29, 26, 0.14), 0 2px 8px rgba(0, 0, 0, 0.04);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 10px 8px 12px;
-  transform: translateY(140%);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
-}
-
-.floating-cta-pill.visible {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
 body.menu-locked {
   overflow: hidden;
 }
@@ -4087,77 +4054,6 @@ body.menu-locked .site-header,
   -webkit-backdrop-filter: none !important;
 }
 
-body.menu-locked .floating-cta-pill {
-  opacity: 0 !important;
-  pointer-events: none !important;
-  transform: translateY(140%) !important;
-}
-
-@media (min-width: 1025px) {
-  .floating-cta-pill {
-    display: none !important;
-  }
-}
-
-.floating-cta-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
-}
-
-.floating-cta-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-  flex-shrink: 0;
-}
-
-.floating-cta-info {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.floating-cta-name {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--text-heading);
-  line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.floating-cta-desc {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.floating-cta-btn {
-  background: var(--color-primary);
-  color: #fff !important;
-  font-weight: 700;
-  font-size: 0.88rem;
-  padding: 9px 18px;
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 3px 10px rgba(194, 58, 43, 0.3);
-  flex-shrink: 0;
-  transition: transform 0.15s ease, background-color 0.15s ease;
-}
-
-.floating-cta-btn:active {
-  transform: scale(0.96);
-  background: var(--color-primary-dark);
-}
 
 .footer-badge-ondevice {
   display: inline-flex;

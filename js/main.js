@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initWidgetPile();
   initTourInteractivity();
   initShowcaseDeck();
-  initFloatingCta();
 });
 
 /* ==========================================================================
@@ -459,25 +458,6 @@ function initShowcaseDeck() {
 
   // Initial setup
   updateDeck(0);
-}
-
-/* ==========================================================================
-   Sticky Floating CTA (Daumenzone auf Mobile)
-   ========================================================================== */
-function initFloatingCta() {
-  const cta = document.getElementById('floatingCta');
-  if (!cta) return;
-
-  function handleScroll() {
-    if (window.scrollY > 500) {
-      cta.classList.add('visible');
-    } else {
-      cta.classList.remove('visible');
-    }
-  }
-
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
 }
 
 
