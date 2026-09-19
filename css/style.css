@@ -272,6 +272,7 @@ button {
   width: 100%;
 }
 
+.mobile-menu-backdrop,
 .mobile-menu-brand,
 .mobile-menu-divider,
 .mobile-menu-bottom,
@@ -3268,145 +3269,109 @@ button {
   }
 
   /* ==========================================================================
-     Ausgeklapptes Washi-Menü für das Smartphone (Makimono / Goshuinchō-Stil)
+     Leichtes Washi-Popup Menü für Mobilgeräte (Floating Popover)
      ========================================================================== */
+  /* Sanfter Weichzeichnungs- & Abdunklungs-Hintergrund für die Seite dahinter */
+  .mobile-menu-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(25, 18, 12, 0.22);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 99990;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .mobile-menu-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Schwebendes, kompaktes Popup-Kärtchen unter dem Menü-Toggle */
   .nav-menu.mobile-open {
     display: flex !important;
     flex-direction: column;
     position: fixed;
-    top: calc(60px + env(safe-area-inset-top, 0px));
-    left: 0;
-    right: 0;
-    width: 100vw;
-    height: calc(100vh - 60px - env(safe-area-inset-top, 0px));
-    height: calc(100dvh - 60px - env(safe-area-inset-top, 0px));
-    max-height: calc(100vh - 60px - env(safe-area-inset-top, 0px));
-    max-height: calc(100dvh - 60px - env(safe-area-inset-top, 0px));
-    background: rgba(251, 247, 239, 0.98);
+    top: calc(64px + env(safe-area-inset-top, 0px));
+    right: 14px;
+    left: auto;
+    width: calc(100vw - 28px);
+    max-width: 290px;
+    height: auto;
+    max-height: calc(100dvh - 84px - env(safe-area-inset-top, 0px));
+    background: rgba(253, 250, 244, 0.96);
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
-    padding: 14px 18px calc(40px + env(safe-area-inset-bottom, 0px));
+    border: 1px solid rgba(180, 160, 140, 0.24);
+    border-radius: 18px;
+    padding: 6px;
+    gap: 2px;
+    box-shadow: 
+      0 18px 40px -6px rgba(35, 20, 10, 0.22),
+      0 2px 8px rgba(0, 0, 0, 0.04),
+      0 0 0 1px rgba(255, 255, 255, 0.7) inset;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    box-shadow: 0 24px 48px rgba(45, 30, 15, 0.18);
-    gap: 8px;
-    animation: slideDownMobile 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 99999;
+    transform-origin: top right;
+    animation: popoverScaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
+  /* Kein Muster im Popup, damit es ultraclean, ruhig & leicht bleibt */
   .nav-menu.mobile-open::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('../assets/icons/seigaiha.svg');
-    background-repeat: repeat;
-    background-size: 240px 120px;
-    opacity: 0.035;
-    pointer-events: none;
-    z-index: 0;
+    display: none !important;
   }
 
-  @keyframes slideDownMobile {
-    from { opacity: 0; transform: translateY(-8px); }
-    to { opacity: 1; transform: translateY(0); }
+  @keyframes popoverScaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.92) translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
   }
 
   .nav-menu.mobile-open li {
     width: 100%;
     list-style: none;
-    position: relative;
-    z-index: 1;
   }
 
-  /* Mini-Brand-Kärtchen oben */
-  .nav-menu.mobile-open .mobile-menu-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 14px;
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(194, 58, 43, 0.15);
-    border-radius: 14px;
-    margin-bottom: 4px;
-    box-shadow: 0 2px 8px rgba(45, 30, 15, 0.04);
-  }
-
-  .nav-menu.mobile-open .mobile-menu-avatar {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    object-fit: cover;
-    background: #fff;
-    border: 1.5px solid rgba(194, 58, 43, 0.25);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-    flex-shrink: 0;
-  }
-
-  .nav-menu.mobile-open .mobile-brand-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .nav-menu.mobile-open .mobile-brand-title {
-    font-size: 0.96rem;
-    font-weight: 800;
-    color: var(--c-ink);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: var(--font-serif);
-    letter-spacing: -0.01em;
-  }
-
-  .nav-menu.mobile-open .mobile-brand-kanji {
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--c-hanko-red);
-    background: rgba(194, 58, 43, 0.08);
-    padding: 1px 6px;
-    border-radius: 4px;
-    border: 1px solid rgba(194, 58, 43, 0.16);
-    font-family: var(--font-serif);
-  }
-
-  .nav-menu.mobile-open .mobile-brand-sub {
-    font-size: 0.72rem;
-    color: var(--c-ink-muted);
-    font-weight: 500;
-  }
-
-  /* Navigations-Kärtchen (Editorial Makimono Pass) */
+  /* Filigrane Menü-Zeilen (Apple Popover Look) */
   .nav-menu.mobile-open .nav-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 12px;
-    border-radius: 13px;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(160, 145, 130, 0.16);
+    padding: 9px 12px;
+    border-radius: 12px;
+    background: transparent;
+    border: none;
     color: var(--c-ink);
     text-decoration: none;
-    box-shadow: 0 2px 6px rgba(45, 30, 15, 0.03);
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: none;
+    transition: background 0.15s ease, color 0.15s ease;
   }
 
   .nav-menu.mobile-open .nav-link::after {
-    display: none;
+    display: none !important;
   }
 
   .nav-menu.mobile-open .nav-link:active,
   .nav-menu.mobile-open .nav-link:hover {
-    background: #ffffff;
-    border-color: rgba(194, 58, 43, 0.35);
-    box-shadow: 0 4px 14px rgba(194, 58, 43, 0.1);
-    transform: translateY(-1px);
+    background: rgba(194, 58, 43, 0.08);
+    color: var(--c-hanko-red);
+    box-shadow: none;
+    transform: none;
   }
 
   .nav-menu.mobile-open .nav-item-left {
     display: flex;
     align-items: center;
-    gap: 11px;
+    gap: 10px;
     min-width: 0;
   }
 
@@ -3414,27 +3379,12 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    background: rgba(240, 235, 222, 0.7);
-    border: 1px solid rgba(180, 160, 140, 0.22);
+    width: 22px;
+    height: 22px;
+    background: transparent;
+    border: none;
     font-size: 1.15rem;
     flex-shrink: 0;
-  }
-
-  .nav-menu.mobile-open .nav-text-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    text-align: left;
-    min-width: 0;
-  }
-
-  .nav-menu.mobile-open .nav-label-row {
-    display: flex;
-    align-items: center;
-    gap: 7px;
   }
 
   .nav-menu.mobile-open .nav-main-title {
@@ -3450,91 +3400,62 @@ button {
     color: var(--c-hanko-red);
   }
 
-  .nav-menu.mobile-open .nav-kanji-badge {
-    display: inline-block;
-    font-family: var(--font-serif);
-    font-size: 0.68rem;
-    font-weight: 700;
-    color: var(--c-hanko-red);
-    background: rgba(194, 58, 43, 0.08);
-    padding: 1px 5px;
-    border-radius: 4px;
-    border: 1px solid rgba(194, 58, 43, 0.18);
-    letter-spacing: 0.03em;
-  }
-
-  .nav-menu.mobile-open .nav-sub-desc {
-    display: block;
-    font-size: 0.73rem;
-    font-weight: 500;
-    color: var(--c-ink-muted);
-    line-height: 1.25;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
   .nav-menu.mobile-open .nav-arrow {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 400;
-    color: var(--c-ink-muted);
-    margin-left: 8px;
+    color: rgba(140, 130, 120, 0.45);
+    margin-left: auto;
     flex-shrink: 0;
-    transition: transform 0.2s ease, color 0.2s ease;
+    transition: color 0.15s ease, transform 0.15s ease;
   }
 
   .nav-menu.mobile-open .nav-link:active .nav-arrow,
   .nav-menu.mobile-open .nav-link:hover .nav-arrow {
     color: var(--c-hanko-red);
-    transform: translateX(3px);
+    transform: translateX(2px);
   }
 
-  /* Japanischer Trennstrich */
+  /* Zarte Haarlinie als Trenner */
   .nav-menu.mobile-open .mobile-menu-divider {
     display: block;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(160, 140, 120, 0.22), transparent);
-    margin: 4px 0 2px;
+    background: rgba(160, 140, 120, 0.15);
+    margin: 4px 6px 4px;
   }
 
-  /* Unterer Bereich: Sprache & App Store CTA */
+  /* Unterer Bereich: Kompakte Sprachauswahl (DE | EN) & CTA */
   .nav-menu.mobile-open .mobile-menu-bottom {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
+    padding: 2px 4px 4px;
   }
 
   .nav-menu.mobile-open .mobile-menu-lang-wrap {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 8px 12px;
-    background: rgba(255, 255, 255, 0.65);
-    border: 1px solid rgba(160, 145, 130, 0.16);
-    border-radius: 12px;
-  }
-
-  .nav-menu.mobile-open .mobile-lang-title {
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--c-ink-muted);
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+    border: none;
   }
 
   .nav-menu.mobile-open .mobile-lang-switcher {
     display: flex;
-    background: rgba(128, 120, 110, 0.12);
+    width: 100%;
+    background: rgba(128, 120, 110, 0.1);
     padding: 3px;
     border-radius: 20px;
     gap: 2px;
   }
 
   .nav-menu.mobile-open .mobile-lang-switcher .lang-btn {
-    padding: 4px 10px;
+    flex: 1;
+    text-align: center;
+    padding: 5px 0;
     font-size: 0.78rem;
     font-weight: 700;
     border-radius: 16px;
@@ -3556,22 +3477,21 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     width: 100%;
-    padding: 13px 20px;
+    padding: 10px 16px;
     background: var(--c-hanko-red);
     color: #ffffff !important;
-    font-size: 0.98rem;
+    font-size: 0.88rem;
     font-weight: 800;
     border-radius: 999px;
-    box-shadow: 0 6px 18px rgba(194, 58, 43, 0.3);
+    box-shadow: 0 4px 12px rgba(194, 58, 43, 0.28);
     text-decoration: none;
     transition: var(--transition);
   }
 
   .nav-menu.mobile-open .btn-cta-mobile:active {
     transform: scale(0.98);
-    box-shadow: 0 2px 8px rgba(194, 58, 43, 0.22);
+    box-shadow: 0 2px 6px rgba(194, 58, 43, 0.2);
   }
 
   /* Hero Section auf dem Phone */

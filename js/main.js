@@ -132,10 +132,12 @@ function initMobileMenu() {
   const toggleBtn = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
   const siteHeader = document.querySelector('.site-header');
+  const backdrop = document.querySelector('.mobile-menu-backdrop');
   if (!toggleBtn || !navMenu) return;
 
   function closeMenu() {
     navMenu.classList.remove('mobile-open');
+    if (backdrop) backdrop.classList.remove('active');
     toggleBtn.classList.remove('open');
     toggleBtn.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('menu-locked');
@@ -145,6 +147,7 @@ function initMobileMenu() {
   toggleBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     const isOpen = navMenu.classList.toggle('mobile-open');
+    if (backdrop) backdrop.classList.toggle('active', isOpen);
     toggleBtn.classList.toggle('open', isOpen);
     toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     document.body.classList.toggle('menu-locked', isOpen);
@@ -155,6 +158,11 @@ function initMobileMenu() {
   navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
+
+  // Schließen bei Klick auf den Backdrop
+  if (backdrop) {
+    backdrop.addEventListener('click', closeMenu);
+  }
 
   // Schließen bei Klick außerhalb
   document.addEventListener('click', (e) => {
