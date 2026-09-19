@@ -1,25 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="40" viewBox="0 0 80 40">
   <defs>
-    <g id="fan" fill="none" stroke="#9C7A55" stroke-width="1.2">
-      <circle cx="0" cy="40" r="40"/>
-      <circle cx="0" cy="40" r="32"/>
-      <circle cx="0" cy="40" r="24"/>
-      <circle cx="0" cy="40" r="16"/>
-      <circle cx="0" cy="40" r="8"/>
+    <g id="fan">
+      <circle cx="0" cy="0" r="40" fill="#FBF7EF" stroke="#9C7A55" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="30" fill="#FBF7EF" stroke="#9C7A55" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="20" fill="#FBF7EF" stroke="#9C7A55" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="10" fill="#FBF7EF" stroke="#9C7A55" stroke-width="1.2"/>
     </g>
   </defs>
-  <!-- Background fans -->
-  <use href="#fan" x="40" y="-40"/>
-  <use href="#fan" x="-40" y="-40"/>
-  <use href="#fan" x="120" y="-40"/>
-  <!-- Middle row fans -->
-  <use href="#fan" x="0" y="-20"/>
-  <use href="#fan" x="80" y="-20"/>
-  <!-- Front row fans -->
-  <use href="#fan" x="40" y="0"/>
-  <use href="#fan" x="-40" y="0"/>
-  <use href="#fan" x="120" y="0"/>
-  <!-- Staggered base row -->
-  <use href="#fan" x="0" y="20"/>
-  <use href="#fan" x="80" y="20"/>
+  <rect width="80" height="40" fill="#FBF7EF"/>
+  <use href="#fan" x="0" y="-40"/>
+  <use href="#fan" x="80" y="-40"/>
+  <use href="#fan" x="-80" y="-40"/>
+  <use href="#fan" x="160" y="-40"/>
+  <use href="#fan" x="-40" y="-20"/>
+  <use href="#fan" x="40" y="-20"/>
+  <use href="#fan" x="120" y="-20"/>
+  <use href="#fan" x="0" y="0"/>
+  <use href="#fan" x="80" y="0"/>
+  <use href="#fan" x="-80" y="0"/>
+  <use href="#fan" x="160" y="0"/>
+  <use href="#fan" x="-40" y="20"/>
+  <use href="#fan" x="40" y="20"/>
+  <use href="#fan" x="120" y="20"/>
+  <use href="#fan" x="0" y="40"/>
+  <use href="#fan" x="80" y="40"/>
+  <use href="#fan" x="-80" y="40"/>
+  <use href="#fan" x="160" y="40"/>
+  <use href="#fan" x="-40" y="60"/>
+  <use href="#fan" x="40" y="60"/>
+  <use href="#fan" x="120" y="60"/>
+  <use href="#fan" x="0" y="80"/>
+  <use href="#fan" x="80" y="80"/>
+  <use href="#fan" x="-80" y="80"/>
+  <use href="#fan" x="160" y="80"/>
 </svg>
