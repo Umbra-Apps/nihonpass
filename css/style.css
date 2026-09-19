@@ -3270,8 +3270,8 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 12px;
-    font-size: 0.78rem;
+    padding: 5px 10px;
+    font-size: 0.76rem;
     font-weight: 700;
     border-radius: 16px;
     border: none;
@@ -3288,11 +3288,6 @@ button {
     font-weight: 800;
   }
 
-  /* Auf dem Smartphone im Header nur DE und EN (Japanisch bleibt im Footer) */
-  .nav-actions .lang-switcher .lang-btn[data-lang="ja"] {
-    display: none !important;
-  }
-
   /* Mobil den Header ultraclean halten: Nur der Sprachchange-Button */
   .nav-actions .btn-cta-small {
     display: none !important;
@@ -3303,11 +3298,6 @@ button {
   .menu-toggle,
   .mobile-menu-backdrop {
     display: none !important;
-  }
-
-  /* Footer-Sprachauswahl zeigt auch auf Mobilgeräten alle 3 Sprachen an */
-  .site-footer .lang-switcher .lang-btn[data-lang="ja"] {
-    display: inline-flex !important;
   }
 
   /* Hero Section auf dem Phone */
