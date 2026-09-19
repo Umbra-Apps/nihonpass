@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+  <!-- Kasagi (oberster geschwungener Querbalken) -->
+  <path d="M 4,22 Q 50,29 96,22 L 98,13 Q 50,20 2,13 Z" />
+  <!-- Shimaki (zweiter Querbalken darunter) -->
+  <rect x="13" y="24" width="74" height="7.5" rx="1" />
+  <!-- Gakuzuka (Verbindungsstück mittig) -->
+  <rect x="46.5" y="27" width="7" height="15" rx="0.5" />
+  <!-- Nuki (unterer Querbalken) -->
+  <rect x="7" y="41" width="86" height="7" rx="1" />
+  <!-- Linke Säule -->
+  <polygon points="25,25 33,25 31,95 23,95" />
+  <!-- Rechte Säule -->
+  <polygon points="67,25 75,25 77,95 69,95" />
+  <!-- Fundamente (Kamebara / Nemaki) -->
+  <rect x="20.5" y="93" width="13" height="4" rx="1" />
+  <rect x="66.5" y="93" width="13" height="4" rx="1" />
+</svg>
