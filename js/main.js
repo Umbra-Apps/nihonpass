@@ -1,5 +1,5 @@
 /**
- * NihonPass — Hauptskript & Interaktionen
+ * NihonPass · Hauptskript & Interaktionen
  */
 
 document.addEventListener('DOMContentLoaded', () => {

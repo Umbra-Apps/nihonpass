@@ -1,4 +1,4 @@
-# NihonPass — Offizielle Webseite
+# NihonPass · Offizielle Webseite
 
 Dieses Verzeichnis enthält die vollständige, moderne und statische Webseite zur iOS-App **NihonPass**.
 
@@ -53,7 +53,7 @@ Im Hero-Bereich befindet sich ein detailliertes iPhone-Mockup. Wenn du deine eig
 ## 4. Struktur der Dateien
 
 ```text
-nihonpass/
+Webseite/
 ├── index.html            # Haupt-Landingpage (One-Pager)
 ├── datenschutz.html      # Datenschutzseite (DE / EN / JA umschaltbar)
 ├── impressum.html        # Impressum nach § 5 DDG (Pflicht in Deutschland)
@@ -65,10 +65,9 @@ nihonpass/
 │   ├── main.js           # FAQ-Accordion, Menü, Umschaltungen
 │   └── translations.js   # Alle Texte für DE, EN, JA
 ├── assets/
-│   ├── images/           # AppIcon, Begleiter (Tanuki, Shiba, Neko), Screenshots, Watch
+│   ├── images/           # AppIcon, Begleiter (Tanuki, Shiba, Neko), Stationsfotos
 │   └── icons/            # Torii SVG, App Store Badges, Seigaiha-Muster
-├── .nojekyll             # Deaktiviert Jekyll für schnelleres, zuverlässiges GitHub Pages Hosting
-└── README.md             # Diese Dokumentation
+└── README.md             # Diese Anleitung
 ```
 
 ---
