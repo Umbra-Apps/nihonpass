@@ -391,7 +391,7 @@ button {
    Hero Section
    ========================================================================== */
 .hero-section {
-  padding: 56px 0 80px;
+  padding: 56px 0 68px;
   position: relative;
   overflow: hidden;
 }
@@ -897,8 +897,41 @@ button {
    Sections Allgemein
    ========================================================================== */
 .section {
-  padding: 84px 0;
+  padding: 70px 0;
   position: relative;
+}
+
+/* Sektionstrenner: Japanische Ticket-Perforation mit Hanko-Punkt */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1.5px dashed rgba(128, 120, 110, 0.22);
+  height: 0;
+}
+
+.section-divider-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--c-hanko-red);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(194, 58, 43, 0.15);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.section-divider:hover .section-divider-dot {
+  transform: scale(1.35);
 }
 
 .section-header {
@@ -3434,6 +3467,16 @@ button {
   /* So funktioniert's auf Smartphones */
   .section {
     padding: 38px 0;
+  }
+
+  .section-divider {
+    max-width: 220px;
+    gap: 12px;
+  }
+
+  .section-divider-dot {
+    width: 6px;
+    height: 6px;
   }
 
   .section-header {
