@@ -301,22 +301,31 @@ button {
   padding: 3px;
   border-radius: 24px;
   width: fit-content;
+  gap: 2px;
 }
 
 .lang-btn {
-  padding: 5px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 11px;
   border-radius: 20px;
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   font-weight: 700;
   color: var(--c-pass-gray);
   transition: var(--transition);
+  line-height: 1;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 .lang-btn.active {
   background: var(--c-washi-pure);
   color: var(--c-hanko-red);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-weight: 800;
 }
 
 .btn-cta-small {
@@ -3196,7 +3205,7 @@ button {
 
   /* Header & Navigation auf dem Smartphone */
   .site-header {
-    height: 60px;
+    height: auto;
   }
 
   .site-header::before {
@@ -3241,221 +3250,27 @@ button {
     font-size: 0.62rem;
   }
 
+  /* Header Nav-Actions auf dem Smartphone: Nur der Sprachchange-Button */
   .nav-actions {
+    display: flex;
+    align-items: center;
     gap: 8px;
   }
 
-  .desktop-lang-switcher {
-    display: none !important;
-  }
-
-  .btn-cta-small {
-    padding: 6px 13px;
-    font-size: 0.78rem;
-    border-radius: 20px;
-  }
-
-  .menu-toggle {
-    display: flex;
-    width: 38px;
-    height: 38px;
-    padding: 7px;
-    border-radius: 9px;
-  }
-
-  /* Im Normalzustand auf Mobilgeräten & Tablets: Desktop-Nav-Liste ausblenden! */
-  .nav-menu {
-    display: none;
-  }
-
-  /* ==========================================================================
-     Leichtes Washi-Popup Menü für Mobilgeräte (Floating Popover)
-     ========================================================================== */
-  /* Sanfter Weichzeichnungs- & Abdunklungs-Hintergrund für die Seite dahinter */
-  .mobile-menu-backdrop {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background: rgba(25, 18, 12, 0.22);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: 99990;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
-  }
-
-  .mobile-menu-backdrop.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* Schwebendes, kompaktes Popup-Kärtchen unter dem Menü-Toggle */
-  .nav-menu.mobile-open {
-    display: flex !important;
-    flex-direction: column;
-    position: fixed;
-    top: calc(64px + env(safe-area-inset-top, 0px));
-    right: 14px;
-    left: auto;
-    width: calc(100vw - 28px);
-    max-width: 290px;
-    height: auto;
-    max-height: calc(100dvh - 84px - env(safe-area-inset-top, 0px));
-    background: rgba(253, 250, 244, 0.96);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border: 1px solid rgba(180, 160, 140, 0.24);
-    border-radius: 18px;
-    padding: 6px;
-    gap: 2px;
-    box-shadow: 
-      0 18px 40px -6px rgba(35, 20, 10, 0.22),
-      0 2px 8px rgba(0, 0, 0, 0.04),
-      0 0 0 1px rgba(255, 255, 255, 0.7) inset;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    z-index: 99999;
-    transform-origin: top right;
-    animation: popoverScaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  /* Kein Muster im Popup, damit es ultraclean, ruhig & leicht bleibt */
-  .nav-menu.mobile-open::before {
-    display: none !important;
-  }
-
-  @keyframes popoverScaleIn {
-    from {
-      opacity: 0;
-      transform: scale(0.92) translateY(-6px);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-    }
-  }
-
-  .nav-menu.mobile-open li {
-    width: 100%;
-    list-style: none;
-  }
-
-  /* Filigrane Menü-Zeilen (Apple Popover Look) */
-  .nav-menu.mobile-open .nav-link {
-    display: flex;
+  .nav-actions .lang-switcher {
+    display: inline-flex !important;
     align-items: center;
-    justify-content: space-between;
-    padding: 9px 12px;
-    border-radius: 12px;
-    background: transparent;
-    border: none;
-    color: var(--c-ink);
-    text-decoration: none;
-    box-shadow: none;
-    transition: background 0.15s ease, color 0.15s ease;
-  }
-
-  .nav-menu.mobile-open .nav-link::after {
-    display: none !important;
-  }
-
-  .nav-menu.mobile-open .nav-link:active,
-  .nav-menu.mobile-open .nav-link:hover {
-    background: rgba(194, 58, 43, 0.08);
-    color: var(--c-hanko-red);
-    box-shadow: none;
-    transform: none;
-  }
-
-  .nav-menu.mobile-open .nav-item-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
-  }
-
-  .nav-menu.mobile-open .nav-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 22px;
-    height: 22px;
-    background: transparent;
-    border: none;
-    font-size: 1.15rem;
-    flex-shrink: 0;
-  }
-
-  .nav-menu.mobile-open .nav-main-title {
-    font-size: 0.94rem;
-    font-weight: 700;
-    color: var(--c-ink);
-    font-family: var(--font-serif);
-    letter-spacing: -0.01em;
-  }
-
-  .nav-menu.mobile-open .nav-link:active .nav-main-title,
-  .nav-menu.mobile-open .nav-link:hover .nav-main-title {
-    color: var(--c-hanko-red);
-  }
-
-  .nav-menu.mobile-open .nav-arrow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.15rem;
-    font-weight: 400;
-    color: rgba(140, 130, 120, 0.45);
-    margin-left: auto;
-    flex-shrink: 0;
-    transition: color 0.15s ease, transform 0.15s ease;
-  }
-
-  .nav-menu.mobile-open .nav-link:active .nav-arrow,
-  .nav-menu.mobile-open .nav-link:hover .nav-arrow {
-    color: var(--c-hanko-red);
-    transform: translateX(2px);
-  }
-
-  /* Zarte Haarlinie als Trenner */
-  .nav-menu.mobile-open .mobile-menu-divider {
-    display: block;
-    height: 1px;
-    background: rgba(160, 140, 120, 0.15);
-    margin: 4px 6px 4px;
-  }
-
-  /* Unterer Bereich: Kompakte Sprachauswahl (DE | EN) & CTA */
-  .nav-menu.mobile-open .mobile-menu-bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 2px 4px 4px;
-  }
-
-  .nav-menu.mobile-open .mobile-menu-lang-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    background: transparent;
-    border: none;
-  }
-
-  .nav-menu.mobile-open .mobile-lang-switcher {
-    display: flex;
-    width: 100%;
-    background: rgba(128, 120, 110, 0.1);
+    background: rgba(128, 120, 110, 0.12);
     padding: 3px;
     border-radius: 20px;
     gap: 2px;
   }
 
-  .nav-menu.mobile-open .mobile-lang-switcher .lang-btn {
-    flex: 1;
-    text-align: center;
-    padding: 5px 0;
+  .nav-actions .lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 12px;
     font-size: 0.78rem;
     font-weight: 700;
     border-radius: 16px;
@@ -3466,32 +3281,33 @@ button {
     transition: var(--transition);
   }
 
-  .nav-menu.mobile-open .mobile-lang-switcher .lang-btn.active {
+  .nav-actions .lang-btn.active {
     background: #ffffff;
     color: var(--c-hanko-red);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     font-weight: 800;
   }
 
-  .nav-menu.mobile-open .btn-cta-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 10px 16px;
-    background: var(--c-hanko-red);
-    color: #ffffff !important;
-    font-size: 0.88rem;
-    font-weight: 800;
-    border-radius: 999px;
-    box-shadow: 0 4px 12px rgba(194, 58, 43, 0.28);
-    text-decoration: none;
-    transition: var(--transition);
+  /* Auf dem Smartphone im Header nur DE und EN (Japanisch bleibt im Footer) */
+  .nav-actions .lang-switcher .lang-btn[data-lang="ja"] {
+    display: none !important;
   }
 
-  .nav-menu.mobile-open .btn-cta-mobile:active {
-    transform: scale(0.98);
-    box-shadow: 0 2px 6px rgba(194, 58, 43, 0.2);
+  /* Mobil den Header ultraclean halten: Nur der Sprachchange-Button */
+  .nav-actions .btn-cta-small {
+    display: none !important;
+  }
+
+  /* Auf Mobilgeräten kein Hamburger-Menü nötig: Nutzer scrollt ganz natürlich */
+  .nav-menu,
+  .menu-toggle,
+  .mobile-menu-backdrop {
+    display: none !important;
+  }
+
+  /* Footer-Sprachauswahl zeigt auch auf Mobilgeräten alle 3 Sprachen an */
+  .site-footer .lang-switcher .lang-btn[data-lang="ja"] {
+    display: inline-flex !important;
   }
 
   /* Hero Section auf dem Phone */
@@ -4191,18 +4007,29 @@ button {
     height: 19px;
     font-size: 0.7rem;
   }
+
+  .lang-btn {
+    padding: 4px 6px;
+    gap: 2px;
+  }
+
+  .lang-flag {
+    font-size: 0.88rem;
+  }
+
+  .btn-cta-small {
+    padding: 5px 11px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .lang-switcher .lang-text {
+    display: none;
+  }
 }
 
 
-body.menu-locked {
-  overflow: hidden;
-}
-
-body.menu-locked .site-header,
-.site-header.menu-open {
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
 
 
 .footer-badge-ondevice {

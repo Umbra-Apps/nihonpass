@@ -39,96 +39,26 @@
 
       <nav>
         <ul class="nav-menu">
-          <!-- 01: Routen -->
-          <li>
-            <a href="#routen" class="nav-link" data-nav="routes">
-              <span class="nav-item-left">
-                <span class="nav-icon" aria-hidden="true">⛩️</span>
-                <span class="nav-main-title" data-i18n="nav_routes">Routen</span>
-              </span>
-              <span class="nav-arrow" aria-hidden="true">›</span>
-            </a>
-          </li>
-
-          <!-- 02: Stempel & Album -->
-          <li>
-            <a href="#stempel" class="nav-link" data-nav="stamps">
-              <span class="nav-item-left">
-                <span class="nav-icon" aria-hidden="true">💮</span>
-                <span class="nav-main-title" data-i18n="nav_stamps">Stempel & Album</span>
-              </span>
-              <span class="nav-arrow" aria-hidden="true">›</span>
-            </a>
-          </li>
-
-          <!-- 03: Watch & Widgets -->
-          <li>
-            <a href="#showcase" class="nav-link" data-nav="showcase">
-              <span class="nav-item-left">
-                <span class="nav-icon" aria-hidden="true">⌚</span>
-                <span class="nav-main-title" data-i18n="nav_showcase">Watch & Widgets</span>
-              </span>
-              <span class="nav-arrow" aria-hidden="true">›</span>
-            </a>
-          </li>
-
-          <!-- 04: Preise -->
-          <li>
-            <a href="#preise" class="nav-link" data-nav="pricing">
-              <span class="nav-item-left">
-                <span class="nav-icon" aria-hidden="true">🎫</span>
-                <span class="nav-main-title" data-i18n="nav_pricing">Preise</span>
-              </span>
-              <span class="nav-arrow" aria-hidden="true">›</span>
-            </a>
-          </li>
-
-          <!-- 05: FAQ -->
-          <li>
-            <a href="#faq" class="nav-link" data-nav="faq">
-              <span class="nav-item-left">
-                <span class="nav-icon" aria-hidden="true">💬</span>
-                <span class="nav-main-title" data-i18n="nav_faq">FAQ</span>
-              </span>
-              <span class="nav-arrow" aria-hidden="true">›</span>
-            </a>
-          </li>
-
-          <li class="mobile-menu-divider" aria-hidden="true"></li>
-
-          <!-- Unterer Bereich: Schnelle Sprachauswahl (DE | EN) & App Store CTA -->
-          <li class="mobile-menu-bottom">
-            <div class="mobile-menu-lang-wrap">
-              <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Sprachauswahl">
-                <button class="lang-btn active" data-lang="de">DE</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-              </div>
-            </div>
-            <a href="#preise" class="btn-cta-mobile" data-i18n="nav_cta">Im App Store laden</a>
-          </li>
+          <li><a href="#routen" class="nav-link" data-i18n="nav_routes">Routen</a></li>
+          <li><a href="#stempel" class="nav-link" data-i18n="nav_stamps">Stempel & Album</a></li>
+          <li><a href="#showcase" class="nav-link" data-i18n="nav_showcase">Watch & Widgets</a></li>
+          <li><a href="#preise" class="nav-link" data-i18n="nav_pricing">Preise</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <!-- Sprachwechsler für Desktop -->
-        <div class="lang-switcher desktop-lang-switcher" role="group" aria-label="Sprachauswahl">
+        <!-- Sprachwechsler: Auf Desktop DE | EN | 日本語, auf Mobile DE | EN -->
+        <div class="lang-switcher" role="group" aria-label="Sprachauswahl">
           <button class="lang-btn active" data-lang="de">DE</button>
           <button class="lang-btn" data-lang="en">EN</button>
           <button class="lang-btn" data-lang="ja">日本語</button>
         </div>
 
         <a href="#preise" class="btn-cta-small" data-i18n="nav_cta_short">Laden</a>
-
-        <!-- Hamburger Menü für Mobile -->
-        <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
     </div>
   </header>
-  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
 
   <!-- ==================== HERO SECTION ==================== -->
   <section class="hero-section">
