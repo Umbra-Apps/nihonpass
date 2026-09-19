@@ -39,21 +39,112 @@
 
       <nav>
         <ul class="nav-menu">
-          <li><a href="#routen" class="nav-link" data-i18n="nav_routes">Routen</a></li>
-          <li><a href="#stempel" class="nav-link" data-i18n="nav_stamps">Stempel & Album</a></li>
-          <li><a href="#showcase" class="nav-link" data-i18n="nav_showcase">Watch & Widgets</a></li>
-          <li><a href="#preise" class="nav-link" data-i18n="nav_pricing">Preise</a></li>
-          <li><a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
-          <li class="mobile-menu-divider" aria-hidden="true"></li>
-          <li class="mobile-menu-lang">
-            <span class="mobile-lang-title" data-i18n="mobile_lang_title">Sprache</span>
-            <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Sprachauswahl">
-              <button class="lang-btn active" data-lang="de">DE</button>
-              <button class="lang-btn" data-lang="en">EN</button>
-              <button class="lang-btn" data-lang="ja">日本語</button>
+          <!-- Mobile-Brand-Kärtchen (nur im ausgeklappten Menü sichtbar) -->
+          <li class="mobile-menu-brand">
+            <img src="assets/images/tanuki_portrait.png" alt="Tanuki Begleiter" class="mobile-menu-avatar">
+            <div class="mobile-brand-info">
+              <div class="mobile-brand-title">NihonPass <span class="mobile-brand-kanji">日本パス</span></div>
+              <div class="mobile-brand-sub" data-i18n="mobile_menu_sub">Deine Reise zu Fuß durch Japan</div>
             </div>
           </li>
-          <li class="mobile-menu-cta">
+
+          <!-- 01: Routen -->
+          <li>
+            <a href="#routen" class="nav-link" data-nav="routes">
+              <span class="nav-item-left">
+                <span class="nav-icon" aria-hidden="true">⛩️</span>
+                <span class="nav-text-wrap">
+                  <span class="nav-label-row">
+                    <span class="nav-main-title" data-i18n="nav_routes">Routen</span>
+                    <span class="nav-kanji-badge" data-i18n="nav_routes_kanji">街道</span>
+                  </span>
+                  <span class="nav-sub-desc" data-i18n="nav_routes_sub">Historische Wege von Kyoto bis Tokio</span>
+                </span>
+              </span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+
+          <!-- 02: Stempel & Album -->
+          <li>
+            <a href="#stempel" class="nav-link" data-nav="stamps">
+              <span class="nav-item-left">
+                <span class="nav-icon" aria-hidden="true">💮</span>
+                <span class="nav-text-wrap">
+                  <span class="nav-label-row">
+                    <span class="nav-main-title" data-i18n="nav_stamps">Stempel & Album</span>
+                    <span class="nav-kanji-badge" data-i18n="nav_stamps_kanji">御朱印</span>
+                  </span>
+                  <span class="nav-sub-desc" data-i18n="nav_stamps_sub">Goshuin-Sammlung & Hanko-Kalender</span>
+                </span>
+              </span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+
+          <!-- 03: Watch & Widgets -->
+          <li>
+            <a href="#showcase" class="nav-link" data-nav="showcase">
+              <span class="nav-item-left">
+                <span class="nav-icon" aria-hidden="true">⌚</span>
+                <span class="nav-text-wrap">
+                  <span class="nav-label-row">
+                    <span class="nav-main-title" data-i18n="nav_showcase">Watch & Widgets</span>
+                    <span class="nav-kanji-badge" data-i18n="nav_showcase_kanji">腕と画面</span>
+                  </span>
+                  <span class="nav-sub-desc" data-i18n="nav_showcase_sub">Am Handgelenk & Sperrbildschirm</span>
+                </span>
+              </span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+
+          <!-- 04: Preise -->
+          <li>
+            <a href="#preise" class="nav-link" data-nav="pricing">
+              <span class="nav-item-left">
+                <span class="nav-icon" aria-hidden="true">🎫</span>
+                <span class="nav-text-wrap">
+                  <span class="nav-label-row">
+                    <span class="nav-main-title" data-i18n="nav_pricing">Preise</span>
+                    <span class="nav-kanji-badge" data-i18n="nav_pricing_kanji">料金</span>
+                  </span>
+                  <span class="nav-sub-desc" data-i18n="nav_pricing_sub">Kyoto dauerhaft gratis · Explorer Pass</span>
+                </span>
+              </span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+
+          <!-- 05: FAQ -->
+          <li>
+            <a href="#faq" class="nav-link" data-nav="faq">
+              <span class="nav-item-left">
+                <span class="nav-icon" aria-hidden="true">💬</span>
+                <span class="nav-text-wrap">
+                  <span class="nav-label-row">
+                    <span class="nav-main-title" data-i18n="nav_faq">FAQ</span>
+                    <span class="nav-kanji-badge" data-i18n="nav_faq_kanji">質問</span>
+                  </span>
+                  <span class="nav-sub-desc" data-i18n="nav_faq_sub">Schritte, Apple Health & Offline</span>
+                </span>
+              </span>
+              <span class="nav-arrow" aria-hidden="true">›</span>
+            </a>
+          </li>
+
+          <li class="mobile-menu-divider" aria-hidden="true"></li>
+
+          <!-- Unterer Bereich: Sprache & App Store CTA -->
+          <li class="mobile-menu-bottom">
+            <div class="mobile-menu-lang-wrap">
+              <span class="mobile-lang-title" data-i18n="mobile_lang_title">Sprache</span>
+              <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Sprachauswahl">
+                <button class="lang-btn active" data-lang="de">DE</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ja">日本語</button>
+              </div>
+            </div>
             <a href="#preise" class="btn-cta-mobile" data-i18n="nav_cta">Im App Store laden</a>
           </li>
         </ul>

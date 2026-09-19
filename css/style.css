@@ -272,9 +272,17 @@ button {
   width: 100%;
 }
 
+.mobile-menu-brand,
 .mobile-menu-divider,
+.mobile-menu-bottom,
 .mobile-menu-lang,
-.mobile-menu-cta {
+.mobile-menu-lang-wrap,
+.mobile-menu-cta,
+.btn-cta-mobile,
+.nav-icon,
+.nav-kanji-badge,
+.nav-sub-desc,
+.nav-arrow {
   display: none;
 }
 
@@ -3259,7 +3267,9 @@ button {
     display: none;
   }
 
-  /* Ausgeklapptes Washi-Menü für das Smartphone */
+  /* ==========================================================================
+     Ausgeklapptes Washi-Menü für das Smartphone (Makimono / Goshuinchō-Stil)
+     ========================================================================== */
   .nav-menu.mobile-open {
     display: flex !important;
     flex-direction: column;
@@ -3275,13 +3285,25 @@ button {
     background: rgba(251, 247, 239, 0.98);
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
-    padding: 16px 20px calc(48px + env(safe-area-inset-bottom, 0px));
+    padding: 14px 18px calc(40px + env(safe-area-inset-bottom, 0px));
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     box-shadow: 0 24px 48px rgba(45, 30, 15, 0.18);
     gap: 8px;
     animation: slideDownMobile 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 99999;
+  }
+
+  .nav-menu.mobile-open::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/icons/seigaiha.svg');
+    background-repeat: repeat;
+    background-size: 240px 120px;
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 0;
   }
 
   @keyframes slideDownMobile {
@@ -3292,93 +3314,245 @@ button {
   .nav-menu.mobile-open li {
     width: 100%;
     list-style: none;
+    position: relative;
+    z-index: 1;
   }
 
-  .nav-menu.mobile-open .nav-link {
-    font-size: 1.05rem;
-    font-weight: 700;
-    padding: 11px 14px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(128, 120, 110, 0.1);
+  /* Mini-Brand-Kärtchen oben */
+  .nav-menu.mobile-open .mobile-menu-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(194, 58, 43, 0.15);
+    border-radius: 14px;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 8px rgba(45, 30, 15, 0.04);
+  }
+
+  .nav-menu.mobile-open .mobile-menu-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+    border: 1.5px solid rgba(194, 58, 43, 0.25);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    flex-shrink: 0;
+  }
+
+  .nav-menu.mobile-open .mobile-brand-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .nav-menu.mobile-open .mobile-brand-title {
+    font-size: 0.96rem;
+    font-weight: 800;
     color: var(--c-ink);
     display: flex;
     align-items: center;
+    gap: 6px;
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-menu.mobile-open .mobile-brand-kanji {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--c-hanko-red);
+    background: rgba(194, 58, 43, 0.08);
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(194, 58, 43, 0.16);
+    font-family: var(--font-serif);
+  }
+
+  .nav-menu.mobile-open .mobile-brand-sub {
+    font-size: 0.72rem;
+    color: var(--c-ink-muted);
+    font-weight: 500;
+  }
+
+  /* Navigations-Kärtchen (Editorial Makimono Pass) */
+  .nav-menu.mobile-open .nav-link {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    transition: var(--transition);
+    padding: 10px 12px;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(160, 145, 130, 0.16);
+    color: var(--c-ink);
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(45, 30, 15, 0.03);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .nav-menu.mobile-open .nav-link::after {
-    content: '→';
-    font-size: 0.88rem;
-    color: var(--c-pass-gray);
-    position: static;
-    width: auto;
-    height: auto;
-    background: none;
-    transition: transform 0.2s ease;
+    display: none;
   }
 
-  .nav-menu.mobile-open .nav-link:hover,
-  .nav-menu.mobile-open .nav-link:active {
-    background: var(--c-washi-pure);
+  .nav-menu.mobile-open .nav-link:active,
+  .nav-menu.mobile-open .nav-link:hover {
+    background: #ffffff;
+    border-color: rgba(194, 58, 43, 0.35);
+    box-shadow: 0 4px 14px rgba(194, 58, 43, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .nav-menu.mobile-open .nav-item-left {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+  }
+
+  .nav-menu.mobile-open .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(240, 235, 222, 0.7);
+    border: 1px solid rgba(180, 160, 140, 0.22);
+    font-size: 1.15rem;
+    flex-shrink: 0;
+  }
+
+  .nav-menu.mobile-open .nav-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: left;
+    min-width: 0;
+  }
+
+  .nav-menu.mobile-open .nav-label-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .nav-menu.mobile-open .nav-main-title {
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: var(--c-ink);
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-menu.mobile-open .nav-link:active .nav-main-title,
+  .nav-menu.mobile-open .nav-link:hover .nav-main-title {
     color: var(--c-hanko-red);
-    border-color: rgba(209, 13, 20, 0.25);
-    box-shadow: 0 2px 8px rgba(209, 13, 20, 0.08);
   }
 
-  .nav-menu.mobile-open .nav-link:hover::after,
-  .nav-menu.mobile-open .nav-link:active::after {
+  .nav-menu.mobile-open .nav-kanji-badge {
+    display: inline-block;
+    font-family: var(--font-serif);
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--c-hanko-red);
+    background: rgba(194, 58, 43, 0.08);
+    padding: 1px 5px;
+    border-radius: 4px;
+    border: 1px solid rgba(194, 58, 43, 0.18);
+    letter-spacing: 0.03em;
+  }
+
+  .nav-menu.mobile-open .nav-sub-desc {
+    display: block;
+    font-size: 0.73rem;
+    font-weight: 500;
+    color: var(--c-ink-muted);
+    line-height: 1.25;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-menu.mobile-open .nav-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--c-ink-muted);
+    margin-left: 8px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .nav-menu.mobile-open .nav-link:active .nav-arrow,
+  .nav-menu.mobile-open .nav-link:hover .nav-arrow {
     color: var(--c-hanko-red);
     transform: translateX(3px);
   }
 
-  .mobile-menu-divider {
+  /* Japanischer Trennstrich */
+  .nav-menu.mobile-open .mobile-menu-divider {
     display: block;
     height: 1px;
-    background: rgba(128, 120, 110, 0.15);
-    margin: 8px 0;
+    background: linear-gradient(90deg, transparent, rgba(160, 140, 120, 0.22), transparent);
+    margin: 4px 0 2px;
   }
 
-  .mobile-menu-lang {
+  /* Unterer Bereich: Sprache & App Store CTA */
+  .nav-menu.mobile-open .mobile-menu-bottom {
     display: flex;
     flex-direction: column;
-    padding: 12px 14px;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(128, 120, 110, 0.12);
-    gap: 8px;
+    gap: 10px;
   }
 
-  .mobile-lang-title {
+  .nav-menu.mobile-open .mobile-menu-lang-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(160, 145, 130, 0.16);
+    border-radius: 12px;
+  }
+
+  .nav-menu.mobile-open .mobile-lang-title {
     font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--c-pass-gray);
+    color: var(--c-ink-muted);
   }
 
-  .mobile-lang-switcher {
+  .nav-menu.mobile-open .mobile-lang-switcher {
     display: flex;
-    width: 100%;
-    background: rgba(128, 120, 110, 0.1);
-    padding: 4px;
-    border-radius: 12px;
+    background: rgba(128, 120, 110, 0.12);
+    padding: 3px;
+    border-radius: 20px;
+    gap: 2px;
   }
 
-  .mobile-lang-switcher .lang-btn {
-    flex: 1;
-    text-align: center;
-    padding: 8px 0;
-    font-size: 0.85rem;
+  .nav-menu.mobile-open .mobile-lang-switcher .lang-btn {
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border-radius: 16px;
+    border: none;
+    background: transparent;
+    color: var(--c-ink-muted);
+    cursor: pointer;
+    transition: var(--transition);
   }
 
-  .mobile-menu-cta {
-    display: block;
-    margin-top: 6px;
+  .nav-menu.mobile-open .mobile-lang-switcher .lang-btn.active {
+    background: #ffffff;
+    color: var(--c-hanko-red);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    font-weight: 800;
   }
 
-  .btn-cta-mobile {
+  .nav-menu.mobile-open .btn-cta-mobile {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3386,16 +3560,18 @@ button {
     width: 100%;
     padding: 13px 20px;
     background: var(--c-hanko-red);
-    color: #fff !important;
+    color: #ffffff !important;
     font-size: 0.98rem;
     font-weight: 800;
-    border-radius: 14px;
-    box-shadow: 0 6px 18px rgba(209, 13, 20, 0.28);
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(194, 58, 43, 0.3);
+    text-decoration: none;
     transition: var(--transition);
   }
 
-  .btn-cta-mobile:active {
+  .nav-menu.mobile-open .btn-cta-mobile:active {
     transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(194, 58, 43, 0.22);
   }
 
   /* Hero Section auf dem Phone */

@@ -7,14 +7,25 @@ const translations = {
   de: {
     // Navigation
     nav_routes: "Routen",
+    nav_routes_kanji: "街道",
+    nav_routes_sub: "Historische Wege von Kyoto bis Tokio",
     nav_stamps: "Stempel & Album",
+    nav_stamps_kanji: "御朱印",
+    nav_stamps_sub: "Goshuin-Sammlung & Hanko-Kalender",
     nav_showcase: "Watch & Widgets",
+    nav_showcase_kanji: "腕と画面",
+    nav_showcase_sub: "Am Handgelenk & Sperrbildschirm",
     nav_experience: "Stempel & Begleiter",
     nav_pricing: "Preise",
+    nav_pricing_kanji: "料金",
+    nav_pricing_sub: "Kyoto dauerhaft gratis · Explorer Pass",
     nav_faq: "FAQ",
+    nav_faq_kanji: "質問",
+    nav_faq_sub: "Schritte, Apple Health & Offline",
     nav_cta: "Im App Store laden",
     nav_cta_short: "Laden",
     mobile_lang_title: "Sprache",
+    mobile_menu_sub: "Deine Reise zu Fuß durch Japan",
 
     // Hero
     hero_sublabel: "日本パス • NIHONPASS",
@@ -241,14 +252,25 @@ const translations = {
   en: {
     // Navigation
     nav_routes: "Routes",
-    nav_stamps: "Stamps & Album",
+    nav_routes_kanji: "街道",
+    nav_routes_sub: "Historic trails from Kyoto to Tokyo",
+    nav_stamps: "Stamps & Journal",
+    nav_stamps_kanji: "御朱印",
+    nav_stamps_sub: "Stamp collection & Hanko calendar",
     nav_showcase: "Watch & Widgets",
+    nav_showcase_kanji: "腕と画面",
+    nav_showcase_sub: "On Apple Watch & Lock Screen",
     nav_experience: "Stamps & Companions",
     nav_pricing: "Pricing",
+    nav_pricing_kanji: "料金",
+    nav_pricing_sub: "Kyoto forever free · Explorer Pass",
     nav_faq: "FAQ",
+    nav_faq_kanji: "質問",
+    nav_faq_sub: "Steps, Apple Health & offline use",
     nav_cta: "Download on App Store",
     nav_cta_short: "Get",
     mobile_lang_title: "Language",
+    mobile_menu_sub: "Your journey on foot through Japan",
 
     // Hero
     hero_sublabel: "日本パス • NIHONPASS",
@@ -475,14 +497,25 @@ const translations = {
   ja: {
     // Navigation
     nav_routes: "街道ルート",
+    nav_routes_kanji: "街道",
+    nav_routes_sub: "京都から東京まで、歴史の古道を歩く",
     nav_stamps: "御朱印・記録",
+    nav_stamps_kanji: "御朱印",
+    nav_stamps_sub: "伝統の御朱印集めと判子カレンダー",
     nav_showcase: "Watch・ウィジェット",
+    nav_showcase_kanji: "腕と画面",
+    nav_showcase_sub: "Apple Watchと和紙ウィジェット",
     nav_experience: "御朱印と相棒",
     nav_pricing: "料金",
+    nav_pricing_kanji: "料金",
+    nav_pricing_sub: "京都はずっと無料 · Explorer Pass",
     nav_faq: "よくある質問",
+    nav_faq_kanji: "質問",
+    nav_faq_sub: "歩数計測・ヘルスケア・オフライン対応",
     nav_cta: "App Storeで入手",
     nav_cta_short: "入手",
     mobile_lang_title: "言語",
+    mobile_menu_sub: "歩いて巡る、静かな日本の旅",
 
     // Hero
     hero_sublabel: "日本パス • NIHONPASS",
