@@ -116,23 +116,6 @@ h1, h2, h3, .section-title, .hero-title, .watch-title {
   font-family: var(--font-serif);
 }
 
-/* Zartes Seigaiha-Wellenmuster oben als dezenter Übergang */
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 180px;
-  background-image: url('../assets/icons/seigaiha.svg');
-  background-repeat: repeat;
-  background-size: 80px 40px;
-  opacity: 0.08;
-  pointer-events: none;
-  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -3585,16 +3568,17 @@ button {
   /* Kalender & Serie auf Smartphones */
   .streak-grid {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 32px;
   }
 
   .fanned-showcase-container {
-    max-width: 320px;
-    height: 410px;
+    max-width: 310px;
+    height: 460px;
+    margin-bottom: 28px;
   }
 
   .fanned-phone {
-    width: 195px;
+    width: 180px;
     border-radius: 36px;
     padding: 6px;
     overflow: hidden;
@@ -3609,14 +3593,14 @@ button {
   }
 
   .fanned-phone-back {
-    left: 8px;
-    top: 15px;
+    left: 10px;
+    top: 10px;
     transform: rotate(-5deg) scale(0.92);
   }
 
   .fanned-phone-front {
-    right: 8px;
-    top: 30px;
+    right: 10px;
+    top: 22px;
     transform: rotate(3deg);
   }
 
@@ -4021,12 +4005,13 @@ button {
   }
 
   .fanned-showcase-container {
-    max-width: 285px;
-    height: 395px;
+    max-width: 280px;
+    height: 420px;
+    margin-bottom: 24px;
   }
 
   .fanned-phone {
-    width: 175px;
+    width: 165px;
     border-radius: 32px;
     padding: 5px;
     overflow: hidden;
@@ -4037,13 +4022,13 @@ button {
   }
 
   .fanned-phone-back {
-    left: 2px;
-    top: 10px;
+    left: 4px;
+    top: 8px;
   }
 
   .fanned-phone-front {
-    right: 2px;
-    top: 25px;
+    right: 4px;
+    top: 18px;
   }
 
   .calendar-grid {
@@ -4055,6 +4040,42 @@ button {
     width: 19px;
     height: 19px;
     font-size: 0.7rem;
+  }
+}
+
+/* ==========================================================================
+   Weicher Unschärfeverlauf an der Display-Unterkante (Mobile & Tablet)
+   ========================================================================== */
+.bottom-blur-fade {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(85px + env(safe-area-inset-bottom, 0px));
+  pointer-events: none;
+  z-index: 980;
+  background: linear-gradient(
+    to bottom,
+    rgba(251, 247, 239, 0) 0%,
+    rgba(251, 247, 239, 0.45) 30%,
+    rgba(251, 247, 239, 0.88) 70%,
+    rgba(251, 247, 239, 0.98) 100%
+  );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 40%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%, black 100%);
+  transition: opacity 0.3s ease;
+}
+
+body.menu-locked .bottom-blur-fade {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+@media (min-width: 1025px) {
+  .bottom-blur-fade {
+    display: none !important;
   }
 }
 
