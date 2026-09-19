@@ -2205,7 +2205,7 @@ button {
   width: 195px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 20px 38px rgba(45, 30, 15, 0.24));
+  filter: none;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
   -webkit-user-drag: none;
