@@ -130,7 +130,7 @@ const translations = {
     // Apple Watch & Widgets Duo Showcase
     showcase_tag: "AM HANDGELENK & HOMESCREEN · 腕と画面",
     showcase_title: "Ein kurzer Blick aufs Handgelenk.",
-    showcase_desc: "Wie weit ist es noch bis zum nächsten Schrein? Ein kurzer Blick auf die Apple Watch genügt, ohne das iPhone aus der Tasche holen zu müssen. Vollkommen synchron mit deiner Reise.",
+    showcase_desc: "Wie weit ist es noch bis zum nächsten Schrein, wie viele Schritte fehlen noch zum Tagesziel und wie steht deine aktuelle Serie? Ein kurzer Blick auf die Apple Watch genügt, ohne das iPhone aus der Tasche holen zu müssen. Vollkommen synchron mit deiner Reise.",
     lockscreen_date: "Donnerstag, 17. September",
     callout_widget: "Washi-Ticket auf dem Sperrbildschirm",
     callout_tanuki: "Dein Tanuki als Reisebegleiter",
@@ -364,7 +364,7 @@ const translations = {
     // Apple Watch & Widgets Duo Showcase
     showcase_tag: "ON WRIST & HOME SCREEN · 腕と画面",
     showcase_title: "A glance at your wrist.",
-    showcase_desc: "See how close you are to your next station at any time, without taking your iPhone out of your pocket. Fully synchronized with your journey.",
+    showcase_desc: "How far is it to the next shrine, how many steps left until your daily goal, and how is your active streak doing? A quick glance at your Apple Watch is all it takes, without having to pull your iPhone from your pocket. Seamlessly synced with your journey.",
     lockscreen_date: "Thursday, September 17",
     callout_widget: "Washi ticket on Lock Screen",
     callout_tanuki: "Your Tanuki travel companion",
@@ -598,7 +598,7 @@ const translations = {
     // Apple Watch & Widgets Duo Showcase
     showcase_tag: "手元とホーム画面 · 腕と画面",
     showcase_title: "手首のひと目で。",
-    showcase_desc: "ポケットからiPhoneを取り出さなくても、次の宿場までの距離がいつでも手元に。あなたの旅と完全に同期し、ホーム画面には手触り感のある和紙チケットが届きます。",
+    showcase_desc: "次の神社まであと何キロ、今日の目標まであと何歩、そして現在の継続日数は？ iPhoneを取り出さなくても、手元のApple Watchを見るだけでひと目で確認できます。あなたの旅と完全に同期します。",
     lockscreen_date: "9月17日 木曜日",
     callout_widget: "ロック画面の和紙チケット",
     callout_tanuki: "旅の相棒タヌキ",
