@@ -95,6 +95,7 @@
 html {
   background-color: #FBF7EF;
   scroll-behavior: smooth;
+  scroll-padding-top: 85px;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
 }
@@ -484,7 +485,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px 12px;
+  gap: 8px 10px;
   margin-top: 4px;
 }
 
@@ -495,12 +496,14 @@ button {
   background: var(--bg-card);
   border: 1px solid var(--c-border-subtle);
   border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 0.8rem;
+  padding: 6px 13px;
+  font-size: 0.78rem;
   font-family: var(--font-sans);
   font-weight: 600;
   color: var(--c-pass-gray);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  white-space: nowrap;
+  line-height: 1;
   transition: var(--transition);
 }
 
@@ -510,8 +513,13 @@ button {
 }
 
 .trust-pill-icon {
-  font-size: 0.85rem;
-  line-height: 1;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  flex-shrink: 0;
+  display: block;
+  color: var(--c-hanko-red);
 }
 
 .hero-privacy-pill {
@@ -543,27 +551,9 @@ button {
   background: var(--c-washi);
   border: 1px solid var(--c-border-subtle);
   border-radius: 30px;
-  transition: var(--transition);
-  cursor: pointer;
+  cursor: default;
+  user-select: none;
   text-decoration: none;
-}
-
-.hero-companion-strip:hover {
-  border-color: rgba(209, 13, 20, 0.35);
-  box-shadow: 0 4px 14px rgba(74, 52, 33, 0.08);
-  transform: translateY(-1px);
-}
-
-.companion-strip-arrow {
-  font-size: 0.88rem;
-  color: var(--c-hanko-red);
-  font-weight: 800;
-  transition: transform 0.2s ease;
-  margin-left: 2px;
-}
-
-.hero-companion-strip:hover .companion-strip-arrow {
-  transform: translateX(3px);
 }
 
 .companion-avatars {
@@ -899,6 +889,15 @@ button {
 .section {
   padding: 70px 0;
   position: relative;
+}
+
+.section[id],
+#routen,
+#stempel,
+#showcase,
+#preise,
+#faq {
+  scroll-margin-top: 85px;
 }
 
 /* Sektionstrenner: Japanische Ticket-Perforation mit Hanko-Punkt */
@@ -3410,8 +3409,18 @@ button {
   }
 
   .trust-pill {
-    padding: 5px 10px;
+    padding: 5px 11px;
     font-size: 0.74rem;
+    white-space: nowrap;
+    line-height: 1;
+    gap: 5px;
+  }
+
+  .trust-pill-icon {
+    width: 13px;
+    height: 13px;
+    min-width: 13px;
+    min-height: 13px;
   }
 
   .hero-privacy-pill {
@@ -3427,6 +3436,8 @@ button {
     max-width: 320px;
     justify-content: center;
     padding: 7px 12px;
+    cursor: default;
+    pointer-events: none;
   }
 
   /* iPhone-Mockup auf Smartphones */
@@ -3493,8 +3504,21 @@ button {
   }
 
   /* So funktioniert's auf Smartphones */
+  html {
+    scroll-padding-top: 75px;
+  }
+
   .section {
     padding: 38px 0;
+  }
+
+  .section[id],
+  #routen,
+  #stempel,
+  #showcase,
+  #preise,
+  #faq {
+    scroll-margin-top: 75px;
   }
 
   .section-divider {
