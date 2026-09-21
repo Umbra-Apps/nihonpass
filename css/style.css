@@ -95,7 +95,6 @@
 html {
   background-color: #FBF7EF;
   scroll-behavior: smooth;
-  scroll-padding-top: 85px;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
 }
@@ -891,13 +890,13 @@ button {
   position: relative;
 }
 
-.section[id],
+.section-divider[id],
 #routen,
 #stempel,
 #showcase,
 #preise,
 #faq {
-  scroll-margin-top: 85px;
+  scroll-margin-top: 88px;
 }
 
 /* Sektionstrenner: Japanische Ticket-Perforation mit Hanko-Punkt */
@@ -3504,21 +3503,17 @@ button {
   }
 
   /* So funktioniert's auf Smartphones */
-  html {
-    scroll-padding-top: 75px;
-  }
-
   .section {
     padding: 38px 0;
   }
 
-  .section[id],
+  .section-divider[id],
   #routen,
   #stempel,
   #showcase,
   #preise,
   #faq {
-    scroll-margin-top: 75px;
+    scroll-margin-top: 76px;
   }
 
   .section-divider {
