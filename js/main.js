@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initCompanionSelector();
   initWidgetPile();
+  initWidgetThemeToggle();
   initTourInteractivity();
   initShowcaseDeck();
 });
@@ -131,7 +132,6 @@ function initFaqAccordion() {
 function initMobileMenu() {
   const toggleBtn = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
-  const siteHeader = document.querySelector('.site-header');
   const backdrop = document.querySelector('.mobile-menu-backdrop');
   if (!toggleBtn || !navMenu) return;
 
@@ -140,8 +140,6 @@ function initMobileMenu() {
     if (backdrop) backdrop.classList.remove('active');
     toggleBtn.classList.remove('open');
     toggleBtn.setAttribute('aria-expanded', 'false');
-    document.body.classList.remove('menu-locked');
-    if (siteHeader) siteHeader.classList.remove('menu-open');
   }
 
   toggleBtn.addEventListener('click', (e) => {
@@ -150,8 +148,6 @@ function initMobileMenu() {
     if (backdrop) backdrop.classList.toggle('active', isOpen);
     toggleBtn.classList.toggle('open', isOpen);
     toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    document.body.classList.toggle('menu-locked', isOpen);
-    if (siteHeader) siteHeader.classList.toggle('menu-open', isOpen);
   });
 
   // Schließen bei Klick auf einen Nav-Link oder mobilen CTA-Button
@@ -159,9 +155,13 @@ function initMobileMenu() {
     link.addEventListener('click', closeMenu);
   });
 
-  // Schließen bei Klick auf den Backdrop
+  // Schließen bei Klick oder Touch auf den Backdrop
   if (backdrop) {
     backdrop.addEventListener('click', closeMenu);
+    backdrop.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      closeMenu();
+    }, { passive: false });
   }
 
   // Schließen bei Klick außerhalb
@@ -170,6 +170,13 @@ function initMobileMenu() {
       closeMenu();
     }
   });
+
+  // Sanftes Schließen beim Weiterscrollen
+  window.addEventListener('scroll', () => {
+    if (navMenu.classList.contains('mobile-open')) {
+      closeMenu();
+    }
+  }, { passive: true });
 
   // Schließen wenn Fenster auf Desktop-Größe vergrößert wird
   window.addEventListener('resize', () => {
@@ -213,6 +220,46 @@ function initWidgetPile() {
       item.style.zIndex = currentHighestZ;
     }, { passive: true });
   });
+}
+
+/* ==========================================================================
+   Homescreen Widgets: Theme Switcher (Washi Hell / Sumi Dunkel)
+   ========================================================================== */
+function initWidgetThemeToggle() {
+  const lightBtn = document.getElementById('widgetThemeLight');
+  const darkBtn = document.getElementById('widgetThemeDark');
+  const widgetImgs = document.querySelectorAll('.bento-widget-img');
+
+  if (!lightBtn || !darkBtn || widgetImgs.length === 0) return;
+
+  function switchTheme(theme) {
+    if (theme === 'dark') {
+      lightBtn.classList.remove('active');
+      darkBtn.classList.add('active');
+      widgetImgs.forEach(img => {
+        const darkSrc = img.getAttribute('data-src-dark');
+        if (darkSrc && img.getAttribute('src') !== darkSrc) {
+          img.style.opacity = '0.5';
+          img.src = darkSrc;
+          img.onload = () => { img.style.opacity = '1'; };
+        }
+      });
+    } else {
+      darkBtn.classList.remove('active');
+      lightBtn.classList.add('active');
+      widgetImgs.forEach(img => {
+        const lightSrc = img.getAttribute('data-src-light');
+        if (lightSrc && img.getAttribute('src') !== lightSrc) {
+          img.style.opacity = '0.5';
+          img.src = lightSrc;
+          img.onload = () => { img.style.opacity = '1'; };
+        }
+      });
+    }
+  }
+
+  lightBtn.addEventListener('click', () => switchTheme('light'));
+  darkBtn.addEventListener('click', () => switchTheme('dark'));
 }
 
 /* ==========================================================================

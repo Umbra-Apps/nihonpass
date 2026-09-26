@@ -44,7 +44,8 @@
         <ul class="nav-menu">
           <li><a href="#routen" class="nav-link" data-i18n="nav_routes">Routen</a></li>
           <li><a href="#stempel" class="nav-link" data-i18n="nav_stamps">Stempel & Album</a></li>
-          <li><a href="#showcase" class="nav-link" data-i18n="nav_showcase">Watch & Widgets</a></li>
+          <li><a href="#widgets" class="nav-link" data-i18n="nav_widgets">Widgets</a></li>
+          <li><a href="#watch" class="nav-link" data-i18n="nav_watch">Apple Watch</a></li>
           <li><a href="#preise" class="nav-link" data-i18n="nav_pricing">Preise</a></li>
           <li><a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a></li>
         </ul>
@@ -202,7 +203,7 @@
           <div class="ticket-body">
             <div class="ticket-meta-strip">
               <span class="ticket-meta-item"><strong data-i18n="route2_dist">78 km</strong> Gesamtlänge</span>
-              <span class="ticket-meta-item"><strong data-i18n="route2_stations">20 Stationen</strong></span>
+              <span class="ticket-meta-item"><strong data-i18n="route2_stations">21 Stationen</strong></span>
             </div>
             <h3 class="ticket-title" data-i18n="route2_title">Tokio & Shōnan</h3>
             <p class="ticket-subtitle" data-i18n="route2_sub">„Von Shogun-Gärten über Kamakura nach Enoshima“</p>
@@ -257,7 +258,7 @@
           </div>
           <div class="ticket-body">
             <div class="ticket-meta-strip">
-              <span class="ticket-meta-item"><strong data-i18n="route4_dist">620 km</strong> Gesamtlänge</span>
+              <span class="ticket-meta-item"><strong data-i18n="route4_dist">599 km</strong> Gesamtlänge</span>
               <span class="ticket-meta-item"><strong data-i18n="route4_stations">59 Stationen</strong></span>
             </div>
             <h3 class="ticket-title" data-i18n="route4_title">Kyushu Mega-Trail</h3>
@@ -347,18 +348,149 @@
     </div>
   </section>
 
-  <!-- ==================== SEKTIONSTRENNER & SPRUNGMARKE ==================== -->
-  <div class="section-divider" id="showcase">
+  <!-- ==================== SEKTIONSTRENNER & SPRUNGMARKE: HOMESCREEN WIDGETS ==================== -->
+  <div class="section-divider" id="widgets">
     <span class="section-divider-dot" aria-hidden="true"></span>
   </div>
 
-  <!-- ==================== APPLE WATCH & WIDGETS ==================== -->
-  <section class="section">
+  <!-- ==================== HOMESCREEN & WIDGETS ==================== -->
+  <section class="section widgets-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag" data-i18n="showcase_tag">AM HANDGELENK & HOMESCREEN · 腕と画面</span>
-        <h2 class="section-title" data-i18n="showcase_title">Ein kurzer Blick aufs Handgelenk.</h2>
-        <p class="section-description" data-i18n="showcase_desc">
+        <span class="section-tag" data-i18n="widgets_tag">DEINE REISE AUF DEM HOMESCREEN · ホーム画面</span>
+        <h2 class="section-title" data-i18n="widgets_title">Japan immer im Blick. Auch ohne die App zu öffnen.</h2>
+        <p class="section-description" data-i18n="widgets_desc">
+          Ob dein virtuelles Reiseticket, der 7-Tage-Aktivitätstrend oder dein täglicher Stempelkalender: Mit den iOS-Widgets wird dein Homescreen zum lebendigen Japan-Reisetagebuch. Wähle deinen bevorzugten Stil:
+        </p>
+
+        <!-- Theme Switcher: Washi (Hell) & Sumi (Dunkel) -->
+        <div class="widget-theme-toggle-wrap">
+          <div class="widget-theme-toggle" role="group" aria-label="Widget-Design auswählen">
+            <button class="widget-theme-btn active" data-theme="light" id="widgetThemeLight">
+              <span class="theme-icon">🌸</span>
+              <span class="theme-label" data-i18n="theme_washi_btn">Washi (Hell)</span>
+            </button>
+            <button class="widget-theme-btn" data-theme="dark" id="widgetThemeDark">
+              <span class="theme-icon">🌙</span>
+              <span class="theme-label" data-i18n="theme_sumi_btn">Sumi (Dunkel)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Widgets Bento Grid -->
+      <div class="widgets-bento-grid">
+        <!-- 1. Ticket Widget (Medium) -->
+        <div class="widget-bento-card widget-bento-medium">
+          <div class="widget-bento-preview">
+            <img src="assets/images/widgets/widget_ticket_medium_light.png" 
+                 data-src-light="assets/images/widgets/widget_ticket_medium_light.png" 
+                 data-src-dark="assets/images/widgets/widget_ticket_medium_dark.png" 
+                 alt="Kyoto Commemorative Pass Ticket Widget" 
+                 class="bento-widget-img" loading="lazy">
+          </div>
+          <div class="widget-bento-info">
+            <span class="widget-badge" data-i18n="widget_b1_badge">Reiseticket · Medium</span>
+            <h3 class="widget-title" data-i18n="widget_b1_title">Kyoto Commemorative Pass</h3>
+            <p class="widget-desc" data-i18n="widget_b1_desc">Klassisches Fahrkarten-Design mit aktuellem Streckenabschnitt, Tanuki-Fortschritt und verbleibender Distanz.</p>
+          </div>
+        </div>
+
+        <!-- 2. Week Activity Widget (Medium) -->
+        <div class="widget-bento-card widget-bento-medium">
+          <div class="widget-bento-preview">
+            <img src="assets/images/widgets/widget_week_medium_light.png" 
+                 data-src-light="assets/images/widgets/widget_week_medium_light.png" 
+                 data-src-dark="assets/images/widgets/widget_week_medium_dark.png" 
+                 alt="Wochen-Trend Widget mit Tanuki" 
+                 class="bento-widget-img" loading="lazy">
+          </div>
+          <div class="widget-bento-info">
+            <span class="widget-badge" data-i18n="widget_b2_badge">Aktivität · Medium</span>
+            <h3 class="widget-title" data-i18n="widget_b2_title">Wochen-Trend & Begleiter</h3>
+            <p class="widget-desc" data-i18n="widget_b2_desc">7-Tage-Balkendiagramm, Gesamtschritte der Woche und Wochendurchschnitt zusammen mit deinem Begleiter im Porträt.</p>
+          </div>
+        </div>
+
+        <!-- 3. Stempelbuch Kalender (Large) -->
+        <div class="widget-bento-card widget-bento-large">
+          <div class="widget-bento-preview">
+            <img src="assets/images/widgets/widget_calendar_large_light.png" 
+                 data-src-light="assets/images/widgets/widget_calendar_large_light.png" 
+                 data-src-dark="assets/images/widgets/widget_calendar_large_dark.png" 
+                 alt="Monats-Stempelbuch Widget Groß" 
+                 class="bento-widget-img bento-widget-img-large" loading="lazy">
+          </div>
+          <div class="widget-bento-info">
+            <span class="widget-badge" data-i18n="widget_b3_badge">Stempelbuch · Groß</span>
+            <h3 class="widget-title" data-i18n="widget_b3_title">Monatlicher Hanko-Kalender</h3>
+            <p class="widget-desc" data-i18n="widget_b3_desc">Deine täglichen roten 歩-Siegel, Ruhetage (休) und deine aktive Serie auf einen Blick direkt auf deinem Homescreen.</p>
+          </div>
+        </div>
+
+        <!-- 4. Next Station (Small) -->
+        <div class="widget-bento-card widget-bento-small">
+          <div class="widget-bento-preview">
+            <img src="assets/images/widgets/widget_station_small_light.png" 
+                 data-src-light="assets/images/widgets/widget_station_small_light.png" 
+                 data-src-dark="assets/images/widgets/widget_station_small_dark.png" 
+                 alt="Nächster Halt Station Widget Klein" 
+                 class="bento-widget-img" loading="lazy">
+          </div>
+          <div class="widget-bento-info">
+            <span class="widget-badge" data-i18n="widget_b4_badge">Meilenstein · Klein</span>
+            <h3 class="widget-title" data-i18n="widget_b4_title">Nächster Halt</h3>
+            <p class="widget-desc" data-i18n="widget_b4_desc">Kompakte Anzeige der nächsten Station, Fortschrittsbalken und Entfernung.</p>
+          </div>
+        </div>
+
+        <!-- 5. Daily Steps & Streak (Small) -->
+        <div class="widget-bento-card widget-bento-small">
+          <div class="widget-bento-preview">
+            <img src="assets/images/widgets/widget_steps_small_light.png" 
+                 data-src-light="assets/images/widgets/widget_steps_small_light.png" 
+                 data-src-dark="assets/images/widgets/widget_steps_small_dark.png" 
+                 alt="Tagesschritte Widget Klein" 
+                 class="bento-widget-img" loading="lazy">
+          </div>
+          <div class="widget-bento-info">
+            <span class="widget-badge" data-i18n="widget_b5_badge">Tagesziel · Klein</span>
+            <h3 class="widget-title" data-i18n="widget_b5_title">Tagesschritte & Trend</h3>
+            <p class="widget-desc" data-i18n="widget_b5_desc">Heutige Schritte, Distanz in Kilometern und Mini-Balken der letzten 7 Tage.</p>
+          </div>
+        </div>
+
+        <!-- 6. Calendar Small (Small) -->
+        <div class="widget-bento-card widget-bento-small">
+          <div class="widget-bento-preview">
+            <img src="assets/images/widgets/widget_calendar_small_light.png" 
+                 data-src-light="assets/images/widgets/widget_calendar_small_light.png" 
+                 data-src-dark="assets/images/widgets/widget_calendar_small_dark.png" 
+                 alt="Kalender Widget Klein" 
+                 class="bento-widget-img" loading="lazy">
+          </div>
+          <div class="widget-bento-info">
+            <span class="widget-badge" data-i18n="widget_b6_badge">Serie · Klein</span>
+            <h3 class="widget-title" data-i18n="widget_b6_title">Kompakt-Kalender</h3>
+            <p class="widget-desc" data-i18n="widget_b6_desc">Kompakte Monatsübersicht deiner Stempeltage für die engsten Ecken deines Homescreens.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SEKTIONSTRENNER & SPRUNGMARKE: APPLE WATCH ==================== -->
+  <div class="section-divider" id="watch">
+    <span class="section-divider-dot" aria-hidden="true"></span>
+  </div>
+
+  <!-- ==================== APPLE WATCH ==================== -->
+  <section class="section watch-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="watch_tag">AM HANDGELENK · 腕</span>
+        <h2 class="section-title" data-i18n="watch_title">Ein kurzer Blick aufs Handgelenk.</h2>
+        <p class="section-description" data-i18n="watch_desc">
           Wie weit ist es noch bis zum nächsten Schrein, wie viele Schritte fehlen noch zum Tagesziel und wie steht deine aktuelle Serie? Ein kurzer Blick auf die Apple Watch genügt, ohne das iPhone aus der Tasche holen zu müssen. Vollkommen synchron mit deiner Reise.
         </p>
       </div>
@@ -386,19 +518,22 @@
         </div>
       </div>
 
-      <!-- Washi & Sumi Homescreen Widgets Showcase -->
-      <div class="widgets-compact-row">
-        <div class="widget-preview-item">
-          <img src="assets/images/widgets/widget_ticket_medium_light.png" alt="NihonPass Washi Ticket Widget" class="widget-preview-img" loading="lazy">
-          <span class="widget-preview-label" data-i18n="widget_lbl_washi">Washi-Ticket (Hell)</span>
+      <!-- 3 Key Features for Apple Watch -->
+      <div class="watch-features-grid">
+        <div class="watch-feature-card">
+          <div class="watch-feature-icon">⌚</div>
+          <h3 class="watch-feature-title" data-i18n="watch_f1_title">Zifferblatt-Komplikationen</h3>
+          <p class="watch-feature-desc" data-i18n="watch_f1_desc">Nächster Meilenstein, Restdistanz und dein Begleiter immer im Blick auf deinem Lieblings-Zifferblatt.</p>
         </div>
-        <div class="widget-preview-item">
-          <img src="assets/images/widgets/widget_ticket_medium_dark.png" alt="NihonPass Sumi Ticket Widget" class="widget-preview-img" loading="lazy">
-          <span class="widget-preview-label" data-i18n="widget_lbl_sumi">Sumi-Ticket (Dunkel)</span>
+        <div class="watch-feature-card">
+          <div class="watch-feature-icon">📳</div>
+          <h3 class="watch-feature-title" data-i18n="watch_f2_title">Sanfte Meilenstein-Haptik</h3>
+          <p class="watch-feature-desc" data-i18n="watch_f2_desc">Ein dezentes Klopfen am Handgelenk signalisiert dir sofort, wenn du einen neuen Schrein oder Tempel erreichst.</p>
         </div>
-        <div class="widget-preview-item">
-          <img src="assets/images/widgets/widget_week_medium_light.png" alt="NihonPass Wochen-Trend Widget" class="widget-preview-img" loading="lazy">
-          <span class="widget-preview-label" data-i18n="widget_lbl_week">Wochen-Trend & Serie</span>
+        <div class="watch-feature-card">
+          <div class="watch-feature-icon">🌲</div>
+          <h3 class="watch-feature-title" data-i18n="watch_f3_title">Autark & Offline</h3>
+          <p class="watch-feature-desc" data-i18n="watch_f3_desc">Gehe ohne iPhone spazieren: Deine Apple Watch zählt autonom mit und synchronisiert alles nahtlos mit Apple Health.</p>
         </div>
       </div>
     </div>
@@ -447,7 +582,7 @@
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-i18n="feat_free_widgets">Widgets, Live Activities & Watch-App</span>
+              <span data-i18n="feat_free_widgets">Reiseticket- & Schritte-Widget, Live Activities & Watch-App</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -475,6 +610,10 @@
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               <span data-i18n="feat_stamps">Alle Stationsstempel & Kultur</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-i18n="feat_stempelbuch">Stempelbuch-Widget: dein Monat voller Tagesstempel auf dem Homescreen</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -515,6 +654,10 @@
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               <span data-i18n="feat_stamps">Alle Stationsstempel & Kultur</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-i18n="feat_stempelbuch">Stempelbuch-Widget: dein Monat voller Tagesstempel auf dem Homescreen</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
