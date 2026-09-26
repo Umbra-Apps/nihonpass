@@ -206,25 +206,12 @@ function initCompanionSelector() {
 }
 
 /* ==========================================================================
-   Widget-Haufen: Klick / Touch zum Nach-Vorne-Holen
+   Widget-Haufen: Tipp holt ein Widget nach vorn
    ========================================================================== */
 function initWidgetPile() {
-  const pile = document.querySelector('.widgets-pile-stage');
-  if (!pile) return;
-
-  let currentHighestZ = 12;
-  const items = pile.querySelectorAll('.pile-item');
-
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      currentHighestZ++;
-      item.style.zIndex = currentHighestZ;
-    });
-
-    item.addEventListener('touchstart', () => {
-      currentHighestZ++;
-      item.style.zIndex = currentHighestZ;
-    }, { passive: true });
+  let oben = 10;
+  document.querySelectorAll('.wpile-item').forEach(item => {
+    item.addEventListener('click', () => { item.style.zIndex = ++oben; });
   });
 }
 

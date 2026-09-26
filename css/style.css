@@ -2302,306 +2302,19 @@ button {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* Homescreen-Buehne: Widgets in echten iOS-Verhaeltnissen.
-   Spalte = kleines Widget, mittel = 2 Spalten, gross = 2 x 2.
-   Abstand wie auf dem iPhone: 14 % der Kachelbreite (74 px bei 530 px). */
-.widget-stage {
-  --wh-caption: var(--c-ink-light);
-  max-width: 1000px;
-  margin: 34px auto 0;
-  padding: 34px 38px 26px;
-  border-radius: 36px;
-  background:
-    radial-gradient(120% 90% at 0% 0%, rgba(255, 255, 255, 0.55), transparent 60%),
-    linear-gradient(160deg, #F1E8DA 0%, #E6D8C4 100%);
-  border: 1px solid rgba(200, 185, 165, 0.45);
-  box-shadow: 0 18px 50px -18px rgba(60, 40, 20, 0.25);
-  transition: background 0.35s ease, border-color 0.35s ease;
-}
-
-.widget-stage.is-dark {
-  --wh-caption: rgba(245, 240, 232, 0.72);
-  background:
-    radial-gradient(120% 90% at 0% 0%, rgba(255, 255, 255, 0.06), transparent 60%),
-    linear-gradient(160deg, #2B2724 0%, #151312 100%);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-.widget-home {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  column-gap: 2.09%;
-  row-gap: 14px;
-  align-items: start;
-}
-
-.wh-item {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
-  min-width: 0;
-}
-
-.wh-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 8px 16px rgba(40, 25, 10, 0.14));
-  transition: opacity 0.2s ease;
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-.wh-item figcaption {
-  font-size: 0.74rem;
-  font-weight: 600;
-  color: var(--wh-caption);
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-}
-
-.wh-large   { grid-column: 1 / span 2; grid-row: 1 / span 2; }
-.wh-ticket-m { grid-column: 3 / span 2; grid-row: 1; }
-.wh-week-m  { grid-column: 3 / span 2; grid-row: 2; }
-.wh-ticket-s { grid-column: 5; grid-row: 1; }
-.wh-steps-s { grid-column: 6; grid-row: 1; }
-.wh-cal-s   { grid-column: 5; grid-row: 2; }
-.wh-note    { grid-column: 6; grid-row: 2; }
-
-.wh-note-card {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  box-sizing: border-box;
-  border-radius: 18%;
-  border: 1.5px dashed rgba(209, 13, 20, 0.45);
-  background: rgba(255, 255, 255, 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2px;
-  padding: 9% 10%;
-  text-align: left;
-  overflow: hidden;
-}
-
-.widget-stage.is-dark .wh-note-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 90, 80, 0.5);
-}
-
-.wh-note-seal {
-  display: inline-grid;
-  place-items: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 2px solid var(--c-hanko-red);
-  color: var(--c-hanko-red);
-  font-weight: 800;
-  font-size: 0.9rem;
-  transform: rotate(-8deg);
-  margin-bottom: 2px;
-}
-
-.wh-note-title {
-  font-size: 0.86rem;
-  font-weight: 800;
-  color: var(--c-ink-dark);
-}
-
-.wh-note-text {
-  font-size: 0.7rem;
-  line-height: 1.3;
-  color: var(--c-ink-light);
-}
-
-.widget-stage.is-dark .wh-note-title { color: #F5F0E8; }
-.widget-stage.is-dark .wh-note-text { color: rgba(245, 240, 232, 0.7); }
-
-.widget-legend {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 10px;
-  margin: 20px auto 0;
-  padding: 0;
-  max-width: 1000px;
-}
-
-.widget-legend li {
-  font-size: 0.82rem;
-  color: var(--c-ink-light);
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(215, 205, 195, 0.55);
-  border-radius: 999px;
-  padding: 5px 14px;
-}
-
-.widget-legend strong {
-  color: var(--c-ink-dark);
-}
-
-/* ==========================================================================
-   Home Screen Widgets: Der kreative Ticket- & Widget-Haufen (Pile)
-   ========================================================================== */
-.widgets-pile-container {
-  position: relative;
-  max-width: 1040px;
-  margin: 16px auto 10px;
-  padding: 10px 0 20px;
-}
-
-.widgets-pile-stage {
-  position: relative;
-  width: 100%;
-  height: 570px;
-  margin: 0 auto 24px;
-}
-
-.pile-item {
-  position: absolute;
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  transition: transform 0.36s cubic-bezier(0.175, 0.885, 0.32, 1.25), box-shadow 0.3s ease, z-index 0s;
-  will-change: transform;
-}
-
-.pile-card {
-  position: relative;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-  transition: box-shadow 0.3s ease;
-  background: rgba(0, 0, 0, 0.03);
-}
-
-.pile-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 
 
 /* Hover-Effekt: Schweben & Aufrichten */
-.pile-item:hover {
-  transform: scale(1.08) translateY(-14px) rotate(0deg) !important;
-  z-index: 50 !important;
-}
-
-.pile-item:hover .pile-card {
-  box-shadow: 0 26px 54px rgba(0, 0, 0, 0.24);
-}
-
 /* Exakte Desktop-Koordinaten für den organischen Haufen */
 /* 1. Ticket Washi (Center-Left) */
-.pile-ticket-light {
-  width: 375px;
-  left: 20%;
-  top: 130px;
-  transform: rotate(-3.5deg);
-  z-index: 4;
-}
-
 /* 2. Ticket Sumi (Center-Right, leicht versetzt darüber) */
-.pile-ticket-dark {
-  width: 375px;
-  left: 36%;
-  top: 220px;
-  transform: rotate(3deg);
-  z-index: 6;
-}
-
 /* 3. Small Station Washi (Links oben) */
-.pile-station-light {
-  width: 175px;
-  left: 10%;
-  top: 60px;
-  transform: rotate(-7deg);
-  z-index: 5;
-}
-
 /* 4. Small Station Sumi (Rechts oben) */
-.pile-station-dark {
-  width: 175px;
-  left: 74%;
-  top: 150px;
-  transform: rotate(6deg);
-  z-index: 7;
-}
-
 /* 5. Medium Week Washi (Links unten) */
-.pile-week-light {
-  width: 375px;
-  left: 5%;
-  top: 310px;
-  transform: rotate(-2deg);
-  z-index: 5;
-}
-
 /* 6. Medium Week Sumi (Rechts oben) */
-.pile-week-dark {
-  width: 375px;
-  left: 50%;
-  top: 50px;
-  transform: rotate(-1.5deg);
-  z-index: 3;
-}
-
 /* 7. Small Steps Washi (Rechts unten) */
-.pile-steps-light {
-  width: 175px;
-  left: 73%;
-  top: 320px;
-  transform: rotate(-4.5deg);
-  z-index: 8;
-}
-
 /* 8. Small Steps Sumi (Mitte unten) */
-.pile-steps-dark {
-  width: 175px;
-  left: 33%;
-  top: 360px;
-  transform: rotate(5deg);
-  z-index: 7;
-}
-
 /* Interaktions-Hinweisleiste */
-.pile-hint-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-  flex-wrap: wrap;
-  margin: 14px auto 0;
-  padding: 14px 24px;
-  background: var(--c-washi);
-  border-radius: 30px;
-  border: 1px solid var(--c-border-subtle);
-  box-shadow: var(--shadow-washi);
-  max-width: 820px;
-}
-
-.pile-hint-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  color: var(--c-ink-light);
-  font-weight: 600;
-}
-
-.pile-hint-icon {
-  font-size: 0.88rem;
-  color: var(--c-hanko-red);
-}
-
 /* ==========================================================================
    Preise (Explorer Pass)
    ========================================================================== */
@@ -3337,24 +3050,6 @@ button {
     height: 140px;
   }
 
-  .widgets-pile-stage {
-    height: 500px;
-  }
-
-  .pile-ticket-light,
-  .pile-ticket-dark,
-  .pile-week-light,
-  .pile-week-dark {
-    width: 320px;
-  }
-
-  .pile-station-light,
-  .pile-station-dark,
-  .pile-steps-light,
-  .pile-steps-dark {
-    width: 150px;
-  }
-
   .fanned-showcase-container {
     max-width: 390px;
     height: 510px;
@@ -3933,81 +3628,6 @@ button {
   }
 
   /* Widget-Haufen auf Smartphones (Fließender Stapel) */
-  .widgets-pile-stage {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0 20px;
-  }
-
-  .pile-item {
-    position: relative;
-    left: auto !important;
-    top: auto !important;
-    width: 92% !important;
-    max-width: 350px !important;
-  }
-
-  .pile-ticket-light {
-    transform: rotate(-2deg);
-    z-index: 2;
-  }
-
-  .pile-ticket-dark {
-    transform: rotate(2.5deg);
-    margin-top: -36px;
-    z-index: 3;
-  }
-
-  .pile-station-light {
-    transform: rotate(-3.5deg);
-    margin-top: -26px;
-    width: 210px !important;
-    z-index: 4;
-  }
-
-  .pile-station-dark {
-    transform: rotate(4deg);
-    margin-top: -30px;
-    width: 210px !important;
-    z-index: 5;
-  }
-
-  .pile-week-light {
-    transform: rotate(-1.5deg);
-    margin-top: -26px;
-    z-index: 6;
-  }
-
-  .pile-week-dark {
-    transform: rotate(2.5deg);
-    margin-top: -36px;
-    z-index: 7;
-  }
-
-  .pile-steps-light {
-    transform: rotate(-3deg);
-    margin-top: -26px;
-    width: 210px !important;
-    z-index: 8;
-  }
-
-  .pile-steps-dark {
-    transform: rotate(3.5deg);
-    margin-top: -30px;
-    width: 210px !important;
-    z-index: 9;
-  }
-
-  .pile-hint-bar {
-    flex-direction: column;
-    gap: 10px;
-    padding: 16px 20px;
-    border-radius: 20px;
-    text-align: center;
-  }
-
   /* Apple Watch & iPhone Duo Stage auf Smartphones */
   .duo-stage-wrap {
     gap: 14px;
@@ -4044,22 +3664,7 @@ button {
     }
   }
 
-            /* Widgets auf Smartphones: siehe eigener Block unter 760 px */
-  .widget-stage {
-    padding: 24px 20px 18px;
-    border-radius: 28px;
-  }
-
-  .wh-note-seal {
-    width: 24px;
-    height: 24px;
-    font-size: 0.75rem;
-  }
-
-  .wh-note-title { font-size: 0.74rem; }
-  .wh-note-text { font-size: 0.64rem; }
-
-  /* Preise auf Smartphones */
+            /* Preise auf Smartphones */
   .pricing-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -4337,38 +3942,6 @@ button {
   color: var(--text-muted);
 }
 
-/* Widgets unter 760 px: zwei Spalten wie auf dem iPhone (klein = 1, mittel = 2).
-   Das grosse Stempelbuch entfaellt, die kleine Fassung und der Hinweis bleiben. */
-@media (max-width: 760px) {
-  .widget-stage {
-    max-width: 440px;
-    margin-top: 24px;
-    padding: 20px 18px 14px;
-  }
-
-  .widget-home {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 6.54%;
-    row-gap: 12px;
-  }
-
-  .wh-large { display: none; }
-  .wh-ticket-m { grid-column: 1 / span 2; grid-row: 1; }
-  .wh-ticket-s { grid-column: 1; grid-row: 2; }
-  .wh-steps-s { grid-column: 2; grid-row: 2; }
-  .wh-week-m  { grid-column: 1 / span 2; grid-row: 3; }
-  .wh-cal-s   { grid-column: 1; grid-row: 4; }
-  .wh-note    { grid-column: 2; grid-row: 4; }
-
-  .wh-item figcaption { font-size: 0.7rem; }
-  .wh-note-seal { width: 28px; height: 28px; font-size: 0.85rem; }
-  .wh-note-title { font-size: 0.86rem; }
-  .wh-note-text { font-size: 0.74rem; }
-
-  /* Jedes Widget ist beschriftet, die Liste waere hier doppelt */
-  .widget-legend { display: none; }
-}
-
 /* Apple Watch: kurze Hinweise statt Karten */
 .watch-chips {
   list-style: none;
@@ -4394,4 +3967,46 @@ button {
 @media (max-width: 760px) {
   .watch-chips { gap: 8px; margin-top: 22px; }
   .watch-chips li { font-size: 0.8rem; padding: 6px 13px; }
+}
+
+/* Widget-Haufen: Positionen in Prozent der Buehne, damit er mitskaliert.
+   Breite = Anteil der Buehnenbreite, Hoehe folgt dem Seitenverhaeltnis des Bildes. */
+.wpile {
+  position: relative;
+  max-width: 860px;
+  aspect-ratio: 860 / 460;
+  margin: 40px auto 8px;
+}
+
+.wpile-item {
+  position: absolute;
+  display: block;
+  height: auto;
+  transform: rotate(var(--r, 0deg));
+  filter: drop-shadow(0 14px 26px rgba(40, 25, 10, 0.18));
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.wpile-item:hover {
+  transform: rotate(0deg) translateY(-6px) scale(1.03);
+}
+
+.wp-large    { width: 36%; left: 10%; top: 12%; --r: -5deg; z-index: 1; }
+.wp-ticket-m { width: 50%; left: 40%; top: 4%;  --r: 3deg;  z-index: 3; }
+.wp-week-m   { width: 50%; left: 33%; top: 50%; --r: -2deg; z-index: 2; }
+.wp-cal-s    { display: none; }
+
+@media (max-width: 760px) {
+  .wpile {
+    aspect-ratio: 343 / 380;
+    margin-top: 28px;
+  }
+
+  .wp-large    { display: none; }
+  .wp-ticket-m { width: 84%; left: 0%;  top: 2%;  --r: -2deg; z-index: 3; }
+  .wp-cal-s    { display: block; width: 44%; left: 54%; top: 28%; --r: 6deg; z-index: 4; }
+  .wp-week-m   { width: 84%; left: 14%; top: 62%; --r: 2deg;  z-index: 2; }
 }

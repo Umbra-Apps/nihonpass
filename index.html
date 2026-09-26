@@ -25,7 +25,7 @@
   <meta property="og:image" content="assets/images/AppIcon.png">
   <meta property="og:type" content="website">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260926d">
 </head>
 <body>
 
@@ -378,50 +378,14 @@
         </div>
       </div>
 
-      <!-- Homescreen-Buehne: echte Groessenverhaeltnisse wie auf dem iPhone.
-           Desktop: grosses Stempelbuch | zwei mittlere | drei kleine + Hinweis.
-           Handy: zwei Spalten, das grosse Stempelbuch entfaellt (die kleine Fassung bleibt). -->
-      <div class="widget-stage" id="widgetStage">
-        <div class="widget-home">
-          <figure class="wh-item wh-large">
-            <img class="wh-img" data-widget="widget_calendar_large" src="assets/images/widgets/de/widget_calendar_large_light.webp" width="1134" height="1182" alt="Stempelbuch-Widget, groß" loading="lazy" decoding="async">
-            <figcaption data-i18n="wh_cap_stempelbuch">Stempelbuch</figcaption>
-          </figure>
-          <figure class="wh-item wh-medium wh-ticket-m">
-            <img class="wh-img" data-widget="widget_ticket_medium" src="assets/images/widgets/de/widget_ticket_medium_light.webp" width="1134" height="530" alt="Reiseticket-Widget, mittel" loading="lazy" decoding="async">
-            <figcaption data-i18n="wh_cap_ticket">Reiseticket</figcaption>
-          </figure>
-          <figure class="wh-item wh-medium wh-week-m">
-            <img class="wh-img" data-widget="widget_week_medium" src="assets/images/widgets/de/widget_week_medium_light.webp" width="1134" height="530" alt="7-Tage-Schritte-Widget, mittel" loading="lazy" decoding="async">
-            <figcaption data-i18n="wh_cap_week">7-Tage-Schritte</figcaption>
-          </figure>
-          <figure class="wh-item wh-small wh-ticket-s">
-            <img class="wh-img" data-widget="widget_ticket_small" src="assets/images/widgets/de/widget_ticket_small_light.webp" width="530" height="530" alt="Reiseticket-Widget, klein" loading="lazy" decoding="async">
-            <figcaption data-i18n="wh_cap_ticket">Reiseticket</figcaption>
-          </figure>
-          <figure class="wh-item wh-small wh-steps-s">
-            <img class="wh-img" data-widget="widget_steps_small" src="assets/images/widgets/de/widget_steps_small_light.webp" width="530" height="530" alt="7-Tage-Schritte-Widget, klein" loading="lazy" decoding="async">
-            <figcaption data-i18n="wh_cap_week">7-Tage-Schritte</figcaption>
-          </figure>
-          <figure class="wh-item wh-small wh-cal-s">
-            <img class="wh-img" data-widget="widget_calendar_small" src="assets/images/widgets/de/widget_calendar_small_light.webp" width="530" height="530" alt="Stempelbuch-Widget, klein" loading="lazy" decoding="async">
-            <figcaption data-i18n="wh_cap_stempelbuch">Stempelbuch</figcaption>
-          </figure>
-          <div class="wh-item wh-small wh-note">
-            <div class="wh-note-card">
-              <span class="wh-note-seal" aria-hidden="true">帳</span>
-              <strong class="wh-note-title" data-i18n="wh_note_title">Stempelbuch</strong>
-              <span class="wh-note-text" data-i18n="wh_note_text">Im Explorer Pass: deine Tagesstempel und deine Serie.</span>
-            </div>
-          </div>
-        </div>
+      <!-- Widget-Haufen: je Widget-Art eines, leicht gedreht uebereinander. Ein Tipp holt
+           eines nach vorn. Das Stempelbuch gross auf dem Desktop, klein auf dem Handy. -->
+      <div class="wpile" id="widgetStage">
+        <img class="wh-img wpile-item wp-large" data-widget="widget_calendar_large" src="assets/images/widgets/de/widget_calendar_large_light.webp" width="1134" height="1182" alt="Stempelbuch-Widget, groß" loading="lazy" decoding="async">
+        <img class="wh-img wpile-item wp-ticket-m" data-widget="widget_ticket_medium" src="assets/images/widgets/de/widget_ticket_medium_light.webp" width="1134" height="530" alt="Reiseticket-Widget, mittel" loading="lazy" decoding="async">
+        <img class="wh-img wpile-item wp-week-m" data-widget="widget_week_medium" src="assets/images/widgets/de/widget_week_medium_light.webp" width="1134" height="530" alt="7-Tage-Schritte-Widget, mittel" loading="lazy" decoding="async">
+        <img class="wh-img wpile-item wp-cal-s" data-widget="widget_calendar_small" src="assets/images/widgets/de/widget_calendar_small_light.webp" width="530" height="530" alt="Stempelbuch-Widget, klein" loading="lazy" decoding="async">
       </div>
-
-      <ul class="widget-legend">
-        <li data-i18n="wh_legend_ticket"><strong>Reiseticket</strong> · klein & mittel</li>
-        <li data-i18n="wh_legend_week"><strong>7-Tage-Schritte</strong> · klein & mittel</li>
-        <li data-i18n="wh_legend_stempelbuch"><strong>Stempelbuch</strong> · klein & groß · Explorer Pass</li>
-      </ul>
     </div>
   </section>
 
@@ -724,7 +688,7 @@
     </div>
   </footer>
 
-  <script src="js/translations.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/translations.js?v=20260926d"></script>
+  <script src="js/main.js?v=20260926d"></script>
 </body>
 </html>
