@@ -134,7 +134,7 @@
         <div class="iphone-mockup">
           <div class="iphone-screen">
             <div class="iphone-island"></div>
-            <img src="assets/images/screenshots/de/karte_reise.png" 
+            <img src="assets/images/screenshots/de/karte_reise.jpg" 
                  data-i18n-src="karte_reise" 
                  alt="NihonPass App-Vorschau: Reise auf der Japan-Karte mit Tanuki" 
                  class="iphone-screen-shot">
@@ -293,7 +293,7 @@
         <div class="fanned-phone fanned-phone-back" title="Goshuin-Stempelalbum">
           <div class="streak-phone-screen">
             <div class="iphone-island"></div>
-            <img src="assets/images/screenshots/de/sammlung.png" 
+            <img src="assets/images/screenshots/de/sammlung.jpg" 
                  data-i18n-src="sammlung" 
                  alt="NihonPass Goshuin-Stempelalbum mit gesammelten Schreinen" 
                  class="streak-screen-img" loading="lazy">
@@ -304,7 +304,7 @@
         <div class="fanned-phone fanned-phone-front" title="Profil & Kalender">
           <div class="streak-phone-screen">
             <div class="iphone-island"></div>
-            <img src="assets/images/screenshots/de/profil_kalender.png" 
+            <img src="assets/images/screenshots/de/profil_kalender.jpg" 
                  data-i18n-src="profil_kalender" 
                  alt="NihonPass Profil, Reisepass & Hanko-Kalender" 
                  class="streak-screen-img">
@@ -360,17 +360,17 @@
         <span class="section-tag" data-i18n="widgets_tag">DEINE REISE AUF DEM HOMESCREEN · ホーム画面</span>
         <h2 class="section-title" data-i18n="widgets_title">Japan immer im Blick. Auch ohne die App zu öffnen.</h2>
         <p class="section-description" data-i18n="widgets_desc">
-          Ob dein virtuelles Reiseticket, der 7-Tage-Aktivitätstrend oder dein täglicher Stempelkalender: Mit den iOS-Widgets wird dein Homescreen zum lebendigen Japan-Reisetagebuch. Wähle deinen bevorzugten Stil:
+          Dein Reiseticket, deine Schritte der letzten 7 Tage und dein Stempelbuch: Die Widgets bringen deine Reise auf den Homescreen. Hell oder dunkel, ganz wie dein iPhone.
         </p>
 
-        <!-- Theme Switcher: Washi (Hell) & Sumi (Dunkel) -->
+        <!-- Hell / Dunkel: tauscht alle Widget-Bilder und den Hintergrund der Buehne -->
         <div class="widget-theme-toggle-wrap">
           <div class="widget-theme-toggle" role="group" aria-label="Widget-Design auswählen">
-            <button class="widget-theme-btn active" data-theme="light" id="widgetThemeLight">
+            <button class="widget-theme-btn active" data-theme="light" id="widgetThemeLight" aria-pressed="true">
               <span class="theme-icon">🌸</span>
               <span class="theme-label" data-i18n="theme_washi_btn">Washi (Hell)</span>
             </button>
-            <button class="widget-theme-btn" data-theme="dark" id="widgetThemeDark">
+            <button class="widget-theme-btn" data-theme="dark" id="widgetThemeDark" aria-pressed="false">
               <span class="theme-icon">🌙</span>
               <span class="theme-label" data-i18n="theme_sumi_btn">Sumi (Dunkel)</span>
             </button>
@@ -378,104 +378,50 @@
         </div>
       </div>
 
-      <!-- Widgets Bento Grid -->
-      <div class="widgets-bento-grid">
-        <!-- 1. Ticket Widget (Medium) -->
-        <div class="widget-bento-card widget-bento-medium">
-          <div class="widget-bento-preview">
-            <img src="assets/images/widgets/widget_ticket_medium_light.png" 
-                 data-src-light="assets/images/widgets/widget_ticket_medium_light.png" 
-                 data-src-dark="assets/images/widgets/widget_ticket_medium_dark.png" 
-                 alt="Kyoto Commemorative Pass Ticket Widget" 
-                 class="bento-widget-img" loading="lazy">
-          </div>
-          <div class="widget-bento-info">
-            <span class="widget-badge" data-i18n="widget_b1_badge">Reiseticket · Medium</span>
-            <h3 class="widget-title" data-i18n="widget_b1_title">Kyoto Commemorative Pass</h3>
-            <p class="widget-desc" data-i18n="widget_b1_desc">Klassisches Fahrkarten-Design mit aktuellem Streckenabschnitt, Tanuki-Fortschritt und verbleibender Distanz.</p>
-          </div>
-        </div>
-
-        <!-- 2. Week Activity Widget (Medium) -->
-        <div class="widget-bento-card widget-bento-medium">
-          <div class="widget-bento-preview">
-            <img src="assets/images/widgets/widget_week_medium_light.png" 
-                 data-src-light="assets/images/widgets/widget_week_medium_light.png" 
-                 data-src-dark="assets/images/widgets/widget_week_medium_dark.png" 
-                 alt="Wochen-Trend Widget mit Tanuki" 
-                 class="bento-widget-img" loading="lazy">
-          </div>
-          <div class="widget-bento-info">
-            <span class="widget-badge" data-i18n="widget_b2_badge">Aktivität · Medium</span>
-            <h3 class="widget-title" data-i18n="widget_b2_title">Wochen-Trend & Begleiter</h3>
-            <p class="widget-desc" data-i18n="widget_b2_desc">7-Tage-Balkendiagramm, Gesamtschritte der Woche und Wochendurchschnitt zusammen mit deinem Begleiter im Porträt.</p>
-          </div>
-        </div>
-
-        <!-- 3. Stempelbuch Kalender (Large) -->
-        <div class="widget-bento-card widget-bento-large">
-          <div class="widget-bento-preview">
-            <img src="assets/images/widgets/widget_calendar_large_light.png" 
-                 data-src-light="assets/images/widgets/widget_calendar_large_light.png" 
-                 data-src-dark="assets/images/widgets/widget_calendar_large_dark.png" 
-                 alt="Monats-Stempelbuch Widget Groß" 
-                 class="bento-widget-img bento-widget-img-large" loading="lazy">
-          </div>
-          <div class="widget-bento-info">
-            <span class="widget-badge" data-i18n="widget_b3_badge">Stempelbuch · Groß</span>
-            <h3 class="widget-title" data-i18n="widget_b3_title">Monatlicher Hanko-Kalender</h3>
-            <p class="widget-desc" data-i18n="widget_b3_desc">Deine täglichen roten 歩-Siegel, Ruhetage (休) und deine aktive Serie auf einen Blick direkt auf deinem Homescreen.</p>
-          </div>
-        </div>
-
-        <!-- 4. Next Station (Small) -->
-        <div class="widget-bento-card widget-bento-small">
-          <div class="widget-bento-preview">
-            <img src="assets/images/widgets/widget_station_small_light.png" 
-                 data-src-light="assets/images/widgets/widget_station_small_light.png" 
-                 data-src-dark="assets/images/widgets/widget_station_small_dark.png" 
-                 alt="Nächster Halt Station Widget Klein" 
-                 class="bento-widget-img" loading="lazy">
-          </div>
-          <div class="widget-bento-info">
-            <span class="widget-badge" data-i18n="widget_b4_badge">Meilenstein · Klein</span>
-            <h3 class="widget-title" data-i18n="widget_b4_title">Nächster Halt</h3>
-            <p class="widget-desc" data-i18n="widget_b4_desc">Kompakte Anzeige der nächsten Station, Fortschrittsbalken und Entfernung.</p>
-          </div>
-        </div>
-
-        <!-- 5. Daily Steps & Streak (Small) -->
-        <div class="widget-bento-card widget-bento-small">
-          <div class="widget-bento-preview">
-            <img src="assets/images/widgets/widget_steps_small_light.png" 
-                 data-src-light="assets/images/widgets/widget_steps_small_light.png" 
-                 data-src-dark="assets/images/widgets/widget_steps_small_dark.png" 
-                 alt="Tagesschritte Widget Klein" 
-                 class="bento-widget-img" loading="lazy">
-          </div>
-          <div class="widget-bento-info">
-            <span class="widget-badge" data-i18n="widget_b5_badge">Tagesziel · Klein</span>
-            <h3 class="widget-title" data-i18n="widget_b5_title">Tagesschritte & Trend</h3>
-            <p class="widget-desc" data-i18n="widget_b5_desc">Heutige Schritte, Distanz in Kilometern und Mini-Balken der letzten 7 Tage.</p>
-          </div>
-        </div>
-
-        <!-- 6. Calendar Small (Small) -->
-        <div class="widget-bento-card widget-bento-small">
-          <div class="widget-bento-preview">
-            <img src="assets/images/widgets/widget_calendar_small_light.png" 
-                 data-src-light="assets/images/widgets/widget_calendar_small_light.png" 
-                 data-src-dark="assets/images/widgets/widget_calendar_small_dark.png" 
-                 alt="Kalender Widget Klein" 
-                 class="bento-widget-img" loading="lazy">
-          </div>
-          <div class="widget-bento-info">
-            <span class="widget-badge" data-i18n="widget_b6_badge">Serie · Klein</span>
-            <h3 class="widget-title" data-i18n="widget_b6_title">Kompakt-Kalender</h3>
-            <p class="widget-desc" data-i18n="widget_b6_desc">Kompakte Monatsübersicht deiner Stempeltage für die engsten Ecken deines Homescreens.</p>
+      <!-- Homescreen-Buehne: echte Groessenverhaeltnisse wie auf dem iPhone.
+           Desktop: grosses Stempelbuch | zwei mittlere | drei kleine + Hinweis.
+           Handy: zwei Spalten, das grosse Stempelbuch entfaellt (die kleine Fassung bleibt). -->
+      <div class="widget-stage" id="widgetStage">
+        <div class="widget-home">
+          <figure class="wh-item wh-large">
+            <img class="wh-img" data-widget="widget_calendar_large" src="assets/images/widgets/de/widget_calendar_large_light.webp" width="1134" height="1182" alt="Stempelbuch-Widget, groß" loading="lazy" decoding="async">
+            <figcaption data-i18n="wh_cap_stempelbuch">Stempelbuch</figcaption>
+          </figure>
+          <figure class="wh-item wh-medium wh-ticket-m">
+            <img class="wh-img" data-widget="widget_ticket_medium" src="assets/images/widgets/de/widget_ticket_medium_light.webp" width="1134" height="530" alt="Reiseticket-Widget, mittel" loading="lazy" decoding="async">
+            <figcaption data-i18n="wh_cap_ticket">Reiseticket</figcaption>
+          </figure>
+          <figure class="wh-item wh-medium wh-week-m">
+            <img class="wh-img" data-widget="widget_week_medium" src="assets/images/widgets/de/widget_week_medium_light.webp" width="1134" height="530" alt="7-Tage-Schritte-Widget, mittel" loading="lazy" decoding="async">
+            <figcaption data-i18n="wh_cap_week">7-Tage-Schritte</figcaption>
+          </figure>
+          <figure class="wh-item wh-small wh-ticket-s">
+            <img class="wh-img" data-widget="widget_ticket_small" src="assets/images/widgets/de/widget_ticket_small_light.webp" width="530" height="530" alt="Reiseticket-Widget, klein" loading="lazy" decoding="async">
+            <figcaption data-i18n="wh_cap_ticket">Reiseticket</figcaption>
+          </figure>
+          <figure class="wh-item wh-small wh-steps-s">
+            <img class="wh-img" data-widget="widget_steps_small" src="assets/images/widgets/de/widget_steps_small_light.webp" width="530" height="530" alt="7-Tage-Schritte-Widget, klein" loading="lazy" decoding="async">
+            <figcaption data-i18n="wh_cap_week">7-Tage-Schritte</figcaption>
+          </figure>
+          <figure class="wh-item wh-small wh-cal-s">
+            <img class="wh-img" data-widget="widget_calendar_small" src="assets/images/widgets/de/widget_calendar_small_light.webp" width="530" height="530" alt="Stempelbuch-Widget, klein" loading="lazy" decoding="async">
+            <figcaption data-i18n="wh_cap_stempelbuch">Stempelbuch</figcaption>
+          </figure>
+          <div class="wh-item wh-small wh-note">
+            <div class="wh-note-card">
+              <span class="wh-note-seal" aria-hidden="true">帳</span>
+              <strong class="wh-note-title" data-i18n="wh_note_title">Stempelbuch</strong>
+              <span class="wh-note-text" data-i18n="wh_note_text">Im Explorer Pass: deine Tagesstempel und deine Serie.</span>
+            </div>
           </div>
         </div>
       </div>
+
+      <ul class="widget-legend">
+        <li data-i18n="wh_legend_ticket"><strong>Reiseticket</strong> · klein & mittel</li>
+        <li data-i18n="wh_legend_week"><strong>7-Tage-Schritte</strong> · klein & mittel</li>
+        <li data-i18n="wh_legend_stempelbuch"><strong>Stempelbuch</strong> · klein & groß · Explorer Pass</li>
+      </ul>
     </div>
   </section>
 
@@ -501,7 +447,7 @@
           <div class="iphone-mockup showcase-iphone">
             <div class="iphone-screen">
               <div class="iphone-island"></div>
-              <img src="assets/images/screenshots/de/station_detail.png" 
+              <img src="assets/images/screenshots/de/station_detail.jpg" 
                    data-i18n-src="station_detail" 
                    alt="NihonPass Station Detail: Kultur und Meilensteine" 
                    class="iphone-screen-shot">
@@ -519,23 +465,12 @@
       </div>
 
       <!-- 3 Key Features for Apple Watch -->
-      <div class="watch-features-grid">
-        <div class="watch-feature-card">
-          <div class="watch-feature-icon">⌚</div>
-          <h3 class="watch-feature-title" data-i18n="watch_f1_title">Zifferblatt-Komplikationen</h3>
-          <p class="watch-feature-desc" data-i18n="watch_f1_desc">Nächster Meilenstein, Restdistanz und dein Begleiter immer im Blick auf deinem Lieblings-Zifferblatt.</p>
-        </div>
-        <div class="watch-feature-card">
-          <div class="watch-feature-icon">📳</div>
-          <h3 class="watch-feature-title" data-i18n="watch_f2_title">Sanfte Meilenstein-Haptik</h3>
-          <p class="watch-feature-desc" data-i18n="watch_f2_desc">Ein dezentes Klopfen am Handgelenk signalisiert dir sofort, wenn du einen neuen Schrein oder Tempel erreichst.</p>
-        </div>
-        <div class="watch-feature-card">
-          <div class="watch-feature-icon">🌲</div>
-          <h3 class="watch-feature-title" data-i18n="watch_f3_title">Autark & Offline</h3>
-          <p class="watch-feature-desc" data-i18n="watch_f3_desc">Gehe ohne iPhone spazieren: Deine Apple Watch zählt autonom mit und synchronisiert alles nahtlos mit Apple Health.</p>
-        </div>
-      </div>
+      <!-- Nur was die Uhr wirklich kann: Komplikationen, Schritte, Abgleich mit dem iPhone -->
+      <ul class="watch-chips">
+        <li data-i18n="watch_chip1">⌚ Reiseticket als Komplikation</li>
+        <li data-i18n="watch_chip2">👣 Schritte heute auf dem Zifferblatt</li>
+        <li data-i18n="watch_chip3">🔄 Synchron mit deinem iPhone</li>
+      </ul>
     </div>
   </section>
 
@@ -555,7 +490,16 @@
         </p>
       </div>
 
-      <div class="pricing-grid pricing-grid-3col">
+      <!-- Nur auf Smartphones: eine Karte statt drei untereinander -->
+      <div class="pricing-mobile-top">
+        <p class="pricing-free-line" data-i18n="plan_free_line"><strong>Kyoto bleibt kostenlos:</strong> die ganze 32-km-Route mit Stempeln, Widgets und Watch.</p>
+        <div class="pricing-switch" role="group" aria-label="Abo wählen">
+          <button type="button" class="pricing-switch-btn active" data-plan="yearly" aria-pressed="true" data-i18n="plan_switch_yearly">Jährlich</button>
+          <button type="button" class="pricing-switch-btn" data-plan="monthly" aria-pressed="false" data-i18n="plan_switch_monthly">Monatlich</button>
+        </div>
+      </div>
+
+      <div class="pricing-grid pricing-grid-3col" id="pricingGrid" data-plan="yearly">
         
         <!-- Karte 1: Starter Pass (Kostenlos-Anker) -->
         <div class="pricing-card pricing-card-free">
@@ -582,7 +526,7 @@
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-i18n="feat_free_widgets">Reiseticket- & Schritte-Widget, Live Activities & Watch-App</span>
+              <span data-i18n="feat_free_widgets">Reiseticket- & Schritte-Widget & Watch-App</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -594,7 +538,7 @@
         </div>
 
         <!-- Karte 2: Monatsabo -->
-        <div class="pricing-card">
+        <div class="pricing-card pricing-card-monthly">
           <h3 class="pricing-name" data-i18n="plan_monthly_title">Monatsabo</h3>
           <div class="pricing-price-wrap">
             <span class="pricing-price" data-i18n="plan_monthly_price">2,99 €</span>
@@ -621,7 +565,7 @@
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-i18n="feat_widgets">Widgets, Live Activities & Watch auf allen Routen</span>
+              <span data-i18n="feat_widgets">Widgets & Watch auf allen Routen</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -634,13 +578,14 @@
 
         <!-- Karte 3: Jahresabo (Featured / Bester Wert) -->
         <div class="pricing-card featured">
-          <span class="pricing-badge-popular" data-i18n="plan_yearly_badge">Beste Wahl · 7 Tage gratis testen</span>
+          <span class="pricing-badge-popular" data-i18n="plan_yearly_badge">Gründerpreis · nur bis 31.12.</span>
           <h3 class="pricing-name" data-i18n="plan_yearly_title">Jahresabo</h3>
           <div class="pricing-price-wrap">
-            <span class="pricing-price" data-i18n="plan_yearly_price">24,99 €</span>
+            <span class="pricing-price" data-i18n="plan_yearly_price">19,99 €</span>
             <span class="pricing-period" data-i18n="plan_yearly_period">/ Jahr</span>
           </div>
-          <div class="pricing-savings" data-i18n="plan_yearly_sub">entspricht nur 2,08 € / Monat (30 % Ersparnis)</div>
+          <div class="pricing-savings" data-i18n="plan_yearly_sub">entspricht 1,67 € / Monat · 44 % günstiger als monatlich</div>
+          <p class="pricing-founder-note" data-i18n="plan_founder_note">Wer bis 31.12. abschließt, behält 19,99 € pro Jahr, solange das Abo läuft. Danach kostet das Jahresabo 24,99 €.</p>
 
           <ul class="pricing-features">
             <li>
@@ -661,7 +606,7 @@
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-i18n="feat_widgets">Widgets, Live Activities & Watch auf allen Routen</span>
+              <span data-i18n="feat_widgets">Widgets & Watch auf allen Routen</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -709,7 +654,7 @@
             <svg class="faq-icon-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
           </button>
           <div class="faq-answer">
-            <p data-i18n="faq_a3">Ja, komplett offline. Alle Routen, Karten, Begleiter und Geschichten sind direkt in der App auf deinem iPhone gespeichert. Du kannst auch im Funkloch oder im Flugmodus entspannt wandern.</p>
+            <p data-i18n="faq_a3">Ja, fast alles. Deine Schritte kommen aus Apple Health auf deinem iPhone, und Routen, Stempel, Begleiter und Geschichten sind in der App gespeichert. Nur die Karte lädt ihre Kacheln von Apple Karten: Ohne Netz siehst du dort nur, was schon geladen war. Deine Schritte zählen trotzdem, und alles holt die App nach, sobald du wieder online bist.</p>
           </div>
         </div>
 

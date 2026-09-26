@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCompanionSelector();
   initWidgetPile();
   initWidgetThemeToggle();
+  initPricingSwitch();
   initTourInteractivity();
   initShowcaseDeck();
 });
@@ -72,14 +73,19 @@ function setLanguage(lang) {
   // Lokalisierte Screenshots tauschen (DE / EN / JA)
   document.querySelectorAll('[data-i18n-src]').forEach(img => {
     const screenKey = img.getAttribute('data-i18n-src');
-    img.src = `assets/images/screenshots/${lang}/${screenKey}.png`;
+    img.src = `assets/images/screenshots/${lang}/${screenKey}.jpg`;
   });
 
   // Lokalisierte Download-Links tauschen
   document.querySelectorAll('[data-i18n-href]').forEach(link => {
     const screenKey = link.getAttribute('data-i18n-href');
-    link.href = `assets/images/screenshots/${lang}/${screenKey}.png`;
+    // Presse-Downloads in voller Aufloesung (1320 x 2868)
+    link.href = `assets/images/screenshots/${lang}/gross/${screenKey}.jpg`;
   });
+
+  // Widget-Bilder gibt es je Sprache (hell und dunkel)
+  widgetLang = lang;
+  updateWidgetImages();
 
   // Textblöcke für rechtliche Seiten & Pressekit umschalten
   document.querySelectorAll('[data-lang-block]').forEach(b => {
@@ -223,43 +229,56 @@ function initWidgetPile() {
 }
 
 /* ==========================================================================
-   Homescreen Widgets: Theme Switcher (Washi Hell / Sumi Dunkel)
+   Homescreen Widgets: Hell / Dunkel und Sprache
+   Bilder liegen unter assets/images/widgets/<sprache>/<name>_<light|dark>.webp
    ========================================================================== */
+let widgetLang = 'de';
+let widgetTheme = 'light';
+
+function updateWidgetImages() {
+  document.querySelectorAll('.wh-img[data-widget]').forEach(img => {
+    const src = `assets/images/widgets/${widgetLang}/${img.dataset.widget}_${widgetTheme}.webp`;
+    if (img.getAttribute('src') === src) return;
+    img.style.opacity = '0.6';
+    img.onload = () => { img.style.opacity = '1'; };
+    img.src = src;
+  });
+  const stage = document.getElementById('widgetStage');
+  if (stage) stage.classList.toggle('is-dark', widgetTheme === 'dark');
+}
+
 function initWidgetThemeToggle() {
-  const lightBtn = document.getElementById('widgetThemeLight');
-  const darkBtn = document.getElementById('widgetThemeDark');
-  const widgetImgs = document.querySelectorAll('.bento-widget-img');
-
-  if (!lightBtn || !darkBtn || widgetImgs.length === 0) return;
-
-  function switchTheme(theme) {
-    if (theme === 'dark') {
-      lightBtn.classList.remove('active');
-      darkBtn.classList.add('active');
-      widgetImgs.forEach(img => {
-        const darkSrc = img.getAttribute('data-src-dark');
-        if (darkSrc && img.getAttribute('src') !== darkSrc) {
-          img.style.opacity = '0.5';
-          img.src = darkSrc;
-          img.onload = () => { img.style.opacity = '1'; };
-        }
+  const buttons = document.querySelectorAll('.widget-theme-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      widgetTheme = btn.dataset.theme === 'dark' ? 'dark' : 'light';
+      buttons.forEach(b => {
+        const active = b === btn;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
       });
-    } else {
-      darkBtn.classList.remove('active');
-      lightBtn.classList.add('active');
-      widgetImgs.forEach(img => {
-        const lightSrc = img.getAttribute('data-src-light');
-        if (lightSrc && img.getAttribute('src') !== lightSrc) {
-          img.style.opacity = '0.5';
-          img.src = lightSrc;
-          img.onload = () => { img.style.opacity = '1'; };
-        }
-      });
-    }
-  }
+      updateWidgetImages();
+    });
+  });
+}
 
-  lightBtn.addEventListener('click', () => switchTheme('light'));
-  darkBtn.addEventListener('click', () => switchTheme('dark'));
+/* ==========================================================================
+   Preise auf Smartphones: Jahr / Monat
+   ========================================================================== */
+function initPricingSwitch() {
+  const grid = document.getElementById('pricingGrid');
+  const buttons = document.querySelectorAll('.pricing-switch-btn');
+  if (!grid || buttons.length === 0) return;
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      grid.dataset.plan = btn.dataset.plan;
+      buttons.forEach(b => {
+        const active = b === btn;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+    });
+  });
 }
 
 /* ==========================================================================
