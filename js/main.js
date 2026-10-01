@@ -223,15 +223,23 @@ let widgetLang = 'de';
 let widgetTheme = 'light';
 
 function updateWidgetImages() {
+  const stage = document.getElementById('widgetStage');
+  const isDark = widgetTheme === 'dark';
+  if (stage) stage.classList.toggle('is-dark', isDark);
+
   document.querySelectorAll('.wh-img[data-widget]').forEach(img => {
-    const src = `assets/images/widgets/${widgetLang}/${img.dataset.widget}_${widgetTheme}.png`;
+    // Wenn Dark Mode aktiv ist, ignorieren wir Widgets, die nur im Light Mode angezeigt werden
+    if (isDark && img.classList.contains('only-light')) return;
+    // Wenn Light Mode aktiv ist, ignorieren wir Widgets, die nur im Dark Mode angezeigt werden
+    if (!isDark && img.classList.contains('only-dark')) return;
+
+    const theme = img.classList.contains('only-dark') ? 'dark' : (img.classList.contains('only-light') ? 'light' : widgetTheme);
+    const src = `assets/images/widgets/${widgetLang}/${img.dataset.widget}_${theme}.png`;
     if (img.getAttribute('src') === src) return;
     img.style.opacity = '0.6';
     img.onload = () => { img.style.opacity = '1'; };
     img.src = src;
   });
-  const stage = document.getElementById('widgetStage');
-  if (stage) stage.classList.toggle('is-dark', widgetTheme === 'dark');
 }
 
 function initWidgetThemeToggle() {

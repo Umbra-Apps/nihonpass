@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>NihonPass · Deine virtuelle Reise durch Japan</title>
-  <meta name="description" content="NihonPass verwandelt deine alltäglichen Schritte in eine Pilgerreise auf echten Wegen durch Japan. Sanft, ruhig und ohne Leistungsdruck.">
+  <meta name="description" content="NihonPass verwandelt deine alltäglichen Schritte in eine virtuelle Reise auf echten historischen Wegen durch Japan. Sanft, ruhig und ohne Leistungsdruck.">
   
   <!-- Smart App Banner für iOS Safari -->
   <meta name="apple-itunes-app" content="app-id=XXXXXXXXXX">
@@ -25,7 +25,7 @@
   <meta property="og:image" content="assets/images/AppIcon.png">
   <meta property="og:type" content="website">
 
-  <link rel="stylesheet" href="css/style.css?v=20261002a">
+  <link rel="stylesheet" href="css/style.css?v=20261002b">
 </head>
 <body>
 
@@ -120,8 +120,9 @@
         <div class="hero-companion-strip">
           <div class="companion-avatars">
             <img src="assets/images/tanuki_portrait.png" alt="Tanuki" class="companion-avatar-item">
-            <img src="assets/images/shiba_portrait.png" alt="Shiba" class="companion-avatar-item">
             <img src="assets/images/neko_portrait.png" alt="Neko" class="companion-avatar-item">
+            <img src="assets/images/shiba_portrait.png" alt="Shiba" class="companion-avatar-item">
+            <img src="assets/images/fox_portrait.png" alt="Kitsune" class="companion-avatar-item">
           </div>
           <span class="companion-strip-text" data-i18n="hero_companion_badge">Wähle deinen Begleiter</span>
         </div>
@@ -353,8 +354,8 @@
         <div class="feature-bullet">
           <div class="bullet-icon">⛩️</div>
           <div>
-            <h4 class="bullet-title" data-i18n="stamp_b3_title">Ein echtes Goshuin-Pilgerbuch</h4>
-            <p class="bullet-text" data-i18n="stamp_b3_desc">Wie in echten japanischen Tempeln sammelst du rote Hanko-Siegel und kleine Geschichten zu jedem erreichten Meilenstein.</p>
+            <h4 class="bullet-title" data-i18n="stamp_b3_title">Eine echte Goshuin-Sammelkarte</h4>
+            <p class="bullet-text" data-i18n="stamp_b3_desc">Wie in traditionellen japanischen Tempeln sammelst du rote Hanko-Siegel und kleine Geschichten auf deiner Sammelkarte zu jedem erreichten Meilenstein.</p>
           </div>
         </div>
       </div>
@@ -372,9 +373,9 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag" data-i18n="widgets_tag">DEINE REISE AUF DEM HOMESCREEN · ホーム画面</span>
-        <h2 class="section-title" data-i18n="widgets_title">Japan immer im Blick. Auch ohne die App zu öffnen.</h2>
+        <h2 class="section-title" data-i18n="widgets_title">Deine Reise immer im Blick.</h2>
         <p class="section-description" data-i18n="widgets_desc">
-          Dein Reiseticket, deine Schritte der letzten 7 Tage und dein Stempelbuch: Die Widgets bringen deine Reise auf den Homescreen. Hell oder dunkel, ganz wie dein iPhone.
+          Das neue Reise-Widget mit Japan-Karte und Gesamtkilometern, dein Reiseticket und deine Stempel-Sammelkarte: Die Widgets bringen deine Reise direkt auf den Homescreen. Hell oder dunkel, ganz wie dein iPhone.
         </p>
 
         <!-- Hell / Dunkel: tauscht alle Widget-Bilder und den Hintergrund der Buehne -->
@@ -397,7 +398,8 @@
       <div class="wpile" id="widgetStage">
         <img class="wh-img wpile-item wp-large" data-widget="widget_calendar_large" src="assets/images/widgets/de/widget_calendar_large_light.png" width="1134" height="1182" alt="Stempelbuch-Widget, groß" loading="lazy" decoding="async">
         <img class="wh-img wpile-item wp-ticket-m" data-widget="widget_ticket_medium" src="assets/images/widgets/de/widget_ticket_medium_light.png" width="1134" height="530" alt="Reiseticket-Widget, mittel" loading="lazy" decoding="async">
-        <img class="wh-img wpile-item wp-reise-m" data-widget="widget_reise_medium" src="assets/images/widgets/de/widget_reise_medium_light.png" width="1134" height="530" alt="Deine-Reise-Widget, mittel" loading="lazy" decoding="async">
+        <img class="wh-img wpile-item wp-reise-m only-light" data-widget="widget_reise_medium" src="assets/images/widgets/de/widget_reise_medium_light.png" width="1134" height="530" alt="Deine-Reise-Widget, mittel" loading="lazy" decoding="async">
+        <img class="wh-img wpile-item wp-week-m only-dark" data-widget="widget_week_medium" src="assets/images/widgets/de/widget_week_medium_dark.png" width="1134" height="530" alt="Schritte-Woche-Widget, mittel" loading="lazy" decoding="async">
         <img class="wh-img wpile-item wp-cal-s" data-widget="widget_calendar_small" src="assets/images/widgets/de/widget_calendar_small_light.png" width="530" height="530" alt="Stempelbuch-Widget, klein" loading="lazy" decoding="async">
       </div>
     </div>
@@ -492,6 +494,10 @@
           <ul class="pricing-features">
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-i18n="feat_free_companions">Kostenlose Begleiter: Tanuki & Katze</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               <span data-i18n="feat_free_kyoto">Kyoto Starter-Route (32 km)</span>
             </li>
             <li>
@@ -528,6 +534,14 @@
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               <span data-i18n="feat_all_routes">Zugang zu allen aktuellen & kommenden Routen</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-i18n="feat_exclusive_companions">Zwei exklusive Begleiter: Shiba & Fuchs</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-i18n="feat_reise_widget">Reise-Widget: Japan-Karte mit Gesamtkilometern</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -573,6 +587,14 @@
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               <span data-i18n="feat_all_routes">Zugang zu allen aktuellen & kommenden Routen</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-i18n="feat_exclusive_companions">Zwei exklusive Begleiter: Shiba & Fuchs</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-i18n="feat_reise_widget">Reise-Widget: Japan-Karte mit Gesamtkilometern</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -702,7 +724,7 @@
     </div>
   </footer>
 
-  <script src="js/translations.js?v=20261002a"></script>
-  <script src="js/main.js?v=20261002a"></script>
+  <script src="js/translations.js?v=20261002b"></script>
+  <script src="js/main.js?v=20261002b"></script>
 </body>
 </html>

@@ -4143,6 +4143,14 @@ button {
 .wp-reise-m  { width: 50%; left: 33%; top: 50%; --r: -2deg; z-index: 2; }
 .wp-cal-s    { display: none; }
 
+#widgetStage.is-dark .only-light {
+  display: none !important;
+}
+
+#widgetStage:not(.is-dark) .only-dark {
+  display: none !important;
+}
+
 @media (max-width: 760px) {
   .wpile {
     aspect-ratio: 343 / 380;
