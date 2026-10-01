@@ -25,7 +25,7 @@
   <meta property="og:image" content="assets/images/AppIcon.png">
   <meta property="og:type" content="website">
 
-  <link rel="stylesheet" href="css/style.css?v=20260926d">
+  <link rel="stylesheet" href="css/style.css?v=20261002a">
 </head>
 <body>
 
@@ -127,17 +127,31 @@
         </div>
       </div>
 
-      <!-- Hero Visual: Hinode + iPhone Mockup -->
+      <!-- Hero Visual: Hinode + Zwei überlappende iPhone-Mockups -->
       <div class="hero-visual">
         <div class="hinode-sun"></div>
 
-        <div class="iphone-mockup">
-          <div class="iphone-screen">
-            <div class="iphone-island"></div>
-            <img src="assets/images/screenshots/de/karte_reise.jpg" 
-                 data-i18n-src="karte_reise" 
-                 alt="NihonPass App-Vorschau: Reise auf der Japan-Karte mit Tanuki" 
-                 class="iphone-screen-shot">
+        <div class="hero-fanned-container">
+          <!-- Hinteres Phone: Routenauswahl mit interaktiver Japan-Karte -->
+          <div class="hero-phone hero-phone-back" title="Routenauswahl Japan-Karte">
+            <div class="iphone-screen">
+              <div class="iphone-island"></div>
+              <img src="assets/images/screenshots/de/routenauswahl.jpg" 
+                   data-i18n-src="routenauswahl" 
+                   alt="NihonPass Routenauswahl mit Japan-Karte" 
+                   class="iphone-screen-shot">
+            </div>
+          </div>
+
+          <!-- Vorderes Phone: Aktuelle Reise & Tanuki auf Karte -->
+          <div class="hero-phone hero-phone-front" title="Aktive Reiseansicht">
+            <div class="iphone-screen">
+              <div class="iphone-island"></div>
+              <img src="assets/images/screenshots/de/karte_reise.jpg" 
+                   data-i18n-src="karte_reise" 
+                   alt="NihonPass App-Vorschau: Reise auf der Japan-Karte mit Tanuki" 
+                   class="iphone-screen-shot">
+            </div>
           </div>
         </div>
       </div>
@@ -331,8 +345,8 @@
         <div class="feature-bullet">
           <div class="bullet-icon">🍵</div>
           <div>
-            <h4 class="bullet-title" data-i18n="streak_b2_title">Der Ruhetag (休) hält deine Serie aufrecht</h4>
-            <p class="bullet-text" data-i18n="streak_b2_desc">Sonntags mal nur auf der Couch gelesen? Völlig in Ordnung: Ein Ruhetag pro Woche unterbricht deine Serie bewusst nicht. Niemand muss jeden Tag rennen.</p>
+            <h4 class="bullet-title" data-i18n="streak_b2_title">Ruhetage (休) halten deine Serie aufrecht</h4>
+            <p class="bullet-text" data-i18n="streak_b2_desc">Sonntags mal nur auf der Couch gelesen? Völlig in Ordnung: Zwei Ruhetage pro Woche unterbrechen deine Serie bewusst nicht. Niemand muss jeden Tag rennen.</p>
           </div>
         </div>
 
@@ -381,10 +395,10 @@
       <!-- Widget-Haufen: je Widget-Art eines, leicht gedreht uebereinander. Ein Tipp holt
            eines nach vorn. Das Stempelbuch gross auf dem Desktop, klein auf dem Handy. -->
       <div class="wpile" id="widgetStage">
-        <img class="wh-img wpile-item wp-large" data-widget="widget_calendar_large" src="assets/images/widgets/de/widget_calendar_large_light.webp" width="1134" height="1182" alt="Stempelbuch-Widget, groß" loading="lazy" decoding="async">
-        <img class="wh-img wpile-item wp-ticket-m" data-widget="widget_ticket_medium" src="assets/images/widgets/de/widget_ticket_medium_light.webp" width="1134" height="530" alt="Reiseticket-Widget, mittel" loading="lazy" decoding="async">
-        <img class="wh-img wpile-item wp-week-m" data-widget="widget_week_medium" src="assets/images/widgets/de/widget_week_medium_light.webp" width="1134" height="530" alt="7-Tage-Schritte-Widget, mittel" loading="lazy" decoding="async">
-        <img class="wh-img wpile-item wp-cal-s" data-widget="widget_calendar_small" src="assets/images/widgets/de/widget_calendar_small_light.webp" width="530" height="530" alt="Stempelbuch-Widget, klein" loading="lazy" decoding="async">
+        <img class="wh-img wpile-item wp-large" data-widget="widget_calendar_large" src="assets/images/widgets/de/widget_calendar_large_light.png" width="1134" height="1182" alt="Stempelbuch-Widget, groß" loading="lazy" decoding="async">
+        <img class="wh-img wpile-item wp-ticket-m" data-widget="widget_ticket_medium" src="assets/images/widgets/de/widget_ticket_medium_light.png" width="1134" height="530" alt="Reiseticket-Widget, mittel" loading="lazy" decoding="async">
+        <img class="wh-img wpile-item wp-reise-m" data-widget="widget_reise_medium" src="assets/images/widgets/de/widget_reise_medium_light.png" width="1134" height="530" alt="Deine-Reise-Widget, mittel" loading="lazy" decoding="async">
+        <img class="wh-img wpile-item wp-cal-s" data-widget="widget_calendar_small" src="assets/images/widgets/de/widget_calendar_small_light.png" width="530" height="530" alt="Stempelbuch-Widget, klein" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
@@ -688,7 +702,7 @@
     </div>
   </footer>
 
-  <script src="js/translations.js?v=20260926d"></script>
-  <script src="js/main.js?v=20260926d"></script>
+  <script src="js/translations.js?v=20261002a"></script>
+  <script src="js/main.js?v=20261002a"></script>
 </body>
 </html>

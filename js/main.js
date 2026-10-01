@@ -224,7 +224,7 @@ let widgetTheme = 'light';
 
 function updateWidgetImages() {
   document.querySelectorAll('.wh-img[data-widget]').forEach(img => {
-    const src = `assets/images/widgets/${widgetLang}/${img.dataset.widget}_${widgetTheme}.webp`;
+    const src = `assets/images/widgets/${widgetLang}/${img.dataset.widget}_${widgetTheme}.png`;
     if (img.getAttribute('src') === src) return;
     img.style.opacity = '0.6';
     img.onload = () => { img.style.opacity = '1'; };

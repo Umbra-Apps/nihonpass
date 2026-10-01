@@ -633,6 +633,62 @@ button {
   transform: translateY(-6px) rotate(-0.8deg);
 }
 
+/* Hero Fanned Mockups (Dual Device Layering: Routenauswahl hinten & Reise vorne) */
+.hero-fanned-container {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  height: 590px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero-phone {
+  position: absolute;
+  width: 260px;
+  background: #141416;
+  border-radius: 48px;
+  padding: 8px;
+  overflow: hidden;
+  box-shadow: 
+    0 30px 70px -12px rgba(45, 30, 15, 0.32), 
+    0 0 0 1px #3A3A3C inset, 
+    0 0 0 2.5px #0E0E10,
+    0 0 0 3.5px rgba(255, 255, 255, 0.08);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
+}
+
+.hero-phone .iphone-screen {
+  border-radius: 40px;
+}
+
+.hero-phone-back {
+  left: 10px;
+  top: 20px;
+  transform: rotate(-7deg) scale(0.92);
+  z-index: 1;
+  filter: brightness(0.95);
+}
+
+.hero-phone-front {
+  right: 10px;
+  top: 42px;
+  transform: rotate(3deg);
+  z-index: 2;
+}
+
+.hero-fanned-container:hover .hero-phone-back {
+  transform: rotate(-10deg) translate(-14px, -6px) scale(0.95);
+  filter: brightness(1);
+}
+
+.hero-fanned-container:hover .hero-phone-front {
+  transform: rotate(4.5deg) translate(8px, -4px) scale(1.02);
+}
+
 .iphone-screen {
   width: 100%;
   aspect-ratio: 1320 / 2868;
@@ -2832,6 +2888,33 @@ button {
     border-radius: 39px;
   }
 
+  .hero-fanned-container {
+    max-width: 380px;
+    height: 500px;
+  }
+
+  .hero-phone {
+    width: 220px;
+    border-radius: 42px;
+    padding: 7px;
+  }
+
+  .hero-phone .iphone-screen {
+    border-radius: 35px;
+  }
+
+  .hero-phone-back {
+    left: 12px;
+    top: 16px;
+    transform: rotate(-6deg) scale(0.92);
+  }
+
+  .hero-phone-front {
+    right: 12px;
+    top: 30px;
+    transform: rotate(3deg);
+  }
+
   .hinode-sun {
     width: 380px;
     height: 380px;
@@ -3346,6 +3429,39 @@ button {
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+
+  .hero-fanned-container {
+    max-width: 320px;
+    height: 430px;
+    margin: 12px auto 0;
+  }
+
+  .hero-phone {
+    width: 185px;
+    border-radius: 36px;
+    padding: 6px;
+    overflow: hidden;
+    box-shadow: 
+      0 18px 45px -8px rgba(45, 30, 15, 0.28), 
+      0 0 0 1px #48484A inset, 
+      0 0 0 2px #121214;
+  }
+
+  .hero-phone .iphone-screen {
+    border-radius: 30px;
+  }
+
+  .hero-phone-back {
+    left: 8px;
+    top: 10px;
+    transform: rotate(-5deg) scale(0.92);
+  }
+
+  .hero-phone-front {
+    right: 8px;
+    top: 24px;
+    transform: rotate(3deg);
   }
 
   .mockup-img-wrap {
@@ -3894,6 +4010,33 @@ button {
     top: 18px;
   }
 
+  .hero-fanned-container {
+    max-width: 280px;
+    height: 388px;
+    margin-bottom: 4px;
+  }
+
+  .hero-phone {
+    width: 165px;
+    border-radius: 32px;
+    padding: 5px;
+    overflow: hidden;
+  }
+
+  .hero-phone .iphone-screen {
+    border-radius: 27px;
+  }
+
+  .hero-phone-back {
+    left: 4px;
+    top: 8px;
+  }
+
+  .hero-phone-front {
+    right: 4px;
+    top: 18px;
+  }
+
   .calendar-grid {
     gap: 3px;
   }
@@ -3996,7 +4139,8 @@ button {
 
 .wp-large    { width: 36%; left: 10%; top: 12%; --r: -5deg; z-index: 1; }
 .wp-ticket-m { width: 50%; left: 40%; top: 4%;  --r: 3deg;  z-index: 3; }
-.wp-week-m   { width: 50%; left: 33%; top: 50%; --r: -2deg; z-index: 2; }
+.wp-week-m,
+.wp-reise-m  { width: 50%; left: 33%; top: 50%; --r: -2deg; z-index: 2; }
 .wp-cal-s    { display: none; }
 
 @media (max-width: 760px) {
@@ -4008,5 +4152,6 @@ button {
   .wp-large    { display: none; }
   .wp-ticket-m { width: 84%; left: 0%;  top: 2%;  --r: -2deg; z-index: 3; }
   .wp-cal-s    { display: block; width: 44%; left: 54%; top: 28%; --r: 6deg; z-index: 4; }
-  .wp-week-m   { width: 84%; left: 14%; top: 62%; --r: 2deg;  z-index: 2; }
+  .wp-week-m,
+  .wp-reise-m  { width: 84%; left: 14%; top: 62%; --r: 2deg;  z-index: 2; }
 }
