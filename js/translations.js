@@ -133,11 +133,11 @@ const translations = {
     comp_neko_badge: "Lieber Stadtbummel als Bergtour",
     comp_shiba_name: "Shiba",
     comp_shiba_kanji: "柴 · 柴犬",
-    comp_shiba_role: "Stirnband sitzt, Tasche ist gepackt. Ein treuer Gefährte voller Energie – exklusiv freigeschaltet mit dem Explorer Pass.",
+    comp_shiba_role: "Kapuzenpulli an, und schon wartet er an der Tür. Treu, voller Energie und über jeden Schritt begeistert – exklusiv freigeschaltet mit dem Explorer Pass.",
     comp_shiba_badge: "Exklusiv mit Explorer Pass",
     comp_fox_name: "Kitsune (Fuchs)",
     comp_fox_kanji: "狐 · きつね",
-    comp_fox_role: "Ein mystischer Begleiter aus den Schreinen Japans im weißen Gewand – exklusiv freigeschaltet mit dem Explorer Pass.",
+    comp_fox_role: "Mit Bandana und Rucksack immer bereit für die nächste Fahrkarte. Wendig, aufmerksam und nie lange an einem Ort – exklusiv freigeschaltet mit dem Explorer Pass.",
     comp_fox_badge: "Exklusiv mit Explorer Pass",
 
     // Home Screen Widgets
@@ -383,11 +383,11 @@ const translations = {
     comp_neko_badge: "City strolls over mountain trails",
     comp_shiba_name: "Shiba",
     comp_shiba_kanji: "柴 · Shiba",
-    comp_shiba_role: "Headband on, bag packed, always full of energy. A loyal companion – exclusive with the Explorer Pass.",
+    comp_shiba_role: "Hoodie on, and already waiting by the door. Loyal, full of energy and excited about every single step – exclusive with the Explorer Pass.",
     comp_shiba_badge: "Exclusive with Explorer Pass",
     comp_fox_name: "Kitsune (Fox)",
     comp_fox_kanji: "狐 · Kitsune",
-    comp_fox_role: "A mystical companion from the shrines of Japan in white robes – exclusive with the Explorer Pass.",
+    comp_fox_role: "Bandana on, backpack packed, always ready for the next ticket. Nimble, alert and never in one place for long – exclusive with the Explorer Pass.",
     comp_fox_badge: "Exclusive with Explorer Pass",
 
     // Home Screen Widgets
@@ -633,7 +633,7 @@ const translations = {
     comp_shiba_badge: "Explorer Pass限定",
     comp_fox_name: "狐（キツネ）",
     comp_fox_kanji: "狐 · きつね",
-    comp_fox_role: "日本の神社に伝わる神秘的で賢い旅の相棒（Explorer Pass限定）。",
+    comp_fox_role: "バンダナを巻いてリュックを背負い、次のきっぷへ出発準備完了。身軽で目ざとく、一つの場所にじっとしていない相棒（Explorer Pass限定）。",
     comp_fox_badge: "Explorer Pass限定",
     comp_neko_name: "ネコ",
     comp_neko_kanji: "猫 · ネコ",
