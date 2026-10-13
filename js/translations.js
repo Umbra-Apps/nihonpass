@@ -130,8 +130,8 @@ const translations = {
     custom_b1_desc: "Genau wie an japanischen Schreinen: Bevor es losgeht, malst du deinen Wunsch mit schwarzer Tusche auf eine kleine Holztafel. Sie hängt an deiner Reise und begleitet dich bis zur Urkunde am Ziel.",
     custom_b2_title: "Dein persönliches Namenssiegel",
     custom_b2_desc: "Ob eine Initiale, ein schnelles Kanji oder ein eigenes Symbol: Male mit dem Pinsel dein rotes Hanko-Siegel. Es wird oben rechts auf deinen Reisepass gestempelt – in echtem Zinnoberrot.",
-    custom_b3_title: "Selbstgemalte Stempel für jeden Tag",
-    custom_b3_desc: "Erreichst du dein Tagesziel, gibt es kein trockenes Häkchen: Du kannst bis zu fünf eigene Stempel gestalten und sogar kurze Notizen zu deinen Spaziergängen im Kalender hinterlassen.",
+    custom_b3_title: "Selbstgemalte Stempel & Raum für Gedanken",
+    custom_b3_desc: "Erreichst du dein Tagesziel, gibt es kein trockenes Häkchen: Du besiegelst den Tag mit bis zu fünf selbstgemalten Stempeln – und hältst in ein paar Zeilen fest, was dich heute bewegt hat. Ein stiller Gedanke, ein bewusster Moment oder einfach das gute Gefühl, draußen gewesen zu sein.",
 
     // Companions (Exakt aus UserProfile.swift)
     comp_tag: "DEINE BEGLEITER · 相棒",
@@ -394,8 +394,8 @@ const translations = {
     custom_b1_desc: "Just like at Japanese shrines: before setting out, paint your wish on a small wooden plaque with black ink. It hangs by your journey all the way to your certificate.",
     custom_b2_title: "Your personal name seal (Hanko)",
     custom_b2_desc: "An initial, a simple Kanji, or your own motif: draw your red Hanko seal with a brush. It stamps the top right of your passport in traditional vermilion.",
-    custom_b3_title: "Hand-drawn stamps for every day",
-    custom_b3_desc: "Hitting your step goal shouldn't feel like ticking off a checklist. Paint up to five custom stamps and add quiet daily notes to your walks in your calendar.",
+    custom_b3_title: "Custom stamps & a quiet space for your thoughts",
+    custom_b3_desc: "Reaching your daily goal shouldn't feel like ticking off a checklist: seal the day with up to five hand-drawn stamps – and capture what moved you today in a few lines. A quiet thought, a mindful moment, or simply the fresh feeling of having been outside.",
 
     // Companions
     comp_tag: "YOUR COMPANIONS · 相棒",
