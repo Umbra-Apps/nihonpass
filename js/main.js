@@ -246,7 +246,7 @@ function updateWidgetImages() {
     if (!isDark && img.classList.contains('only-dark')) return;
 
     const theme = img.classList.contains('only-dark') ? 'dark' : (img.classList.contains('only-light') ? 'light' : widgetTheme);
-    const src = `assets/images/widgets/${widgetLang}/${img.dataset.widget}_${theme}.png?v=20261003`;
+    const src = `assets/images/widgets/${widgetLang}/${img.dataset.widget}_${theme}.png?v=20261013`;
     if (img.getAttribute('src') === src) return;
     img.style.opacity = '0.6';
     img.onload = () => { img.style.opacity = '1'; };
