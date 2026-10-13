@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPricingSwitch();
   initTourInteractivity();
   initShowcaseDeck();
+  initRoutesCarousel();
 });
 
 /* ==========================================================================
@@ -511,6 +512,38 @@ function initShowcaseDeck() {
 
   // Initial setup
   updateDeck(0);
+}
+
+/* ==========================================================================
+   Mobile Routen-Tickets Swipe Carousel
+   ========================================================================== */
+function initRoutesCarousel() {
+  const grid = document.querySelector('.routes-grid');
+  const dots = document.querySelectorAll('.route-dot');
+  if (!grid || dots.length === 0) return;
+
+  const cards = grid.querySelectorAll('.route-ticket');
+
+  grid.addEventListener('scroll', () => {
+    const scrollLeft = grid.scrollLeft;
+    const cardWidth = cards[0]?.offsetWidth || 270;
+    const gap = 14;
+    const activeIndex = Math.min(
+      cards.length - 1,
+      Math.max(0, Math.round(scrollLeft / (cardWidth + gap)))
+    );
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === activeIndex);
+    });
+  }, { passive: true });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      if (cards[i]) {
+        cards[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    });
+  });
 }
 
 

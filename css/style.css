@@ -1436,6 +1436,10 @@ button {
   gap: 28px;
 }
 
+.routes-mobile-dots {
+  display: none;
+}
+
 .route-ticket {
   background: var(--c-washi);
   border-radius: var(--radius-ticket);
@@ -3639,28 +3643,119 @@ button {
     padding: 20px 16px;
   }
 
-  /* Routen-Tickets auf Smartphones */
+  /* Routen-Tickets auf Smartphones: kompakter horizontaler Swipe */
   .routes-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 14px;
+    padding: 6px 16px 14px;
+    margin: 0 -16px;
+  }
+
+  .routes-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .route-ticket {
+    flex: 0 0 76vw;
+    max-width: 290px;
+    min-width: 250px;
+    scroll-snap-align: center;
+    border-radius: 16px;
   }
 
   .ticket-header-img {
-    aspect-ratio: 16 / 10;
-    height: auto;
-    min-height: 170px;
+    height: 125px;
+    min-height: 125px;
+    aspect-ratio: unset;
+  }
+
+  .ticket-access-badge {
+    top: 9px;
+    left: 9px;
+    padding: 3px 9px;
+    font-size: 0.65rem;
+  }
+
+  .ticket-region-tag {
+    bottom: 7px;
+    left: 9px;
+    font-size: 0.68rem;
+  }
+
+  .ticket-perforation {
+    height: 16px;
+  }
+
+  .ticket-perforation::before,
+  .ticket-perforation::after {
+    width: 14px;
+    height: 14px;
+  }
+
+  .ticket-perforation::before {
+    left: -7px;
+  }
+
+  .ticket-perforation::after {
+    right: -7px;
   }
 
   .ticket-body {
-    padding: 10px 18px 18px;
+    padding: 8px 14px 12px;
+  }
+
+  .ticket-meta-strip {
+    margin-bottom: 4px;
+    font-size: 0.72rem;
   }
 
   .ticket-title {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
+    margin-bottom: 2px;
   }
 
   .ticket-subtitle {
-    font-size: 0.88rem;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+
+  .ticket-footer {
+    padding-top: 6px;
+  }
+
+  .ticket-code {
+    font-size: 0.68rem;
+  }
+
+  .ticket-barcode {
+    height: 16px;
+  }
+
+  .routes-mobile-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .route-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(128, 120, 110, 0.3);
+    transition: all 0.25s ease;
+    cursor: pointer;
+  }
+
+  .route-dot.is-active {
+    width: 18px;
+    background: var(--c-hanko-red);
   }
 
   /* Kalender & Serie auf Smartphones */
