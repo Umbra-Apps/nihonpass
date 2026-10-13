@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initCompanionSelector();
   initWidgetPile();
-  initWidgetThemeToggle();
   initPricingSwitch();
   initTourInteractivity();
   initShowcaseDeck();
@@ -228,44 +227,17 @@ function initWidgetPile() {
 }
 
 /* ==========================================================================
-   Homescreen Widgets: Hell / Dunkel und Sprache
-   Bilder liegen unter assets/images/widgets/<sprache>/<name>_<light|dark>.webp
+   Homescreen Widgets: Sprache
    ========================================================================== */
 let widgetLang = 'de';
-let widgetTheme = 'light';
 
 function updateWidgetImages() {
-  const stage = document.getElementById('widgetStage');
-  const isDark = widgetTheme === 'dark';
-  if (stage) stage.classList.toggle('is-dark', isDark);
-
   document.querySelectorAll('.wh-img[data-widget]').forEach(img => {
-    // Wenn Dark Mode aktiv ist, ignorieren wir Widgets, die nur im Light Mode angezeigt werden
-    if (isDark && img.classList.contains('only-light')) return;
-    // Wenn Light Mode aktiv ist, ignorieren wir Widgets, die nur im Dark Mode angezeigt werden
-    if (!isDark && img.classList.contains('only-dark')) return;
-
-    const theme = img.classList.contains('only-dark') ? 'dark' : (img.classList.contains('only-light') ? 'light' : widgetTheme);
-    const src = `assets/images/widgets/${widgetLang}/${img.dataset.widget}_${theme}.png?v=20261013`;
+    const src = `assets/images/widgets/${widgetLang}/${img.dataset.widget}_light.png?v=20261013`;
     if (img.getAttribute('src') === src) return;
     img.style.opacity = '0.6';
     img.onload = () => { img.style.opacity = '1'; };
     img.src = src;
-  });
-}
-
-function initWidgetThemeToggle() {
-  const buttons = document.querySelectorAll('.widget-theme-btn');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      widgetTheme = btn.dataset.theme === 'dark' ? 'dark' : 'light';
-      buttons.forEach(b => {
-        const active = b === btn;
-        b.classList.toggle('active', active);
-        b.setAttribute('aria-pressed', active ? 'true' : 'false');
-      });
-      updateWidgetImages();
-    });
   });
 }
 

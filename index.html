@@ -134,7 +134,7 @@
         <div class="hinode-sun"></div>
 
         <div class="hero-fanned-container">
-          <!-- Hinteres Phone: Routenauswahl mit interaktiver Japan-Karte -->
+          <!-- Hinteres Phone links: Routenauswahl mit interaktiver Japan-Karte -->
           <div class="hero-phone hero-phone-back" title="Routenauswahl Japan-Karte">
             <div class="iphone-screen">
               <div class="iphone-island"></div>
@@ -145,7 +145,18 @@
             </div>
           </div>
 
-          <!-- Vorderes Phone: Aktuelle Reise & Tanuki auf Karte -->
+          <!-- Phone rechts versetzt darunter: Japan-Karte im Sumi-Dunkelmodus -->
+          <div class="hero-phone hero-phone-dark" title="Dunkelmodus Japan-Karte">
+            <div class="iphone-screen">
+              <div class="iphone-island"></div>
+              <img src="assets/images/screenshots/de/dark_mode.jpg" 
+                   data-i18n-src="dark_mode" 
+                   alt="NihonPass App-Vorschau: Sumi-Dunkelmodus" 
+                   class="iphone-screen-shot">
+            </div>
+          </div>
+
+          <!-- Vorderes Phone rechts oben: Aktuelle Reise & Tanuki auf Karte (Hell) -->
           <div class="hero-phone hero-phone-front" title="Aktive Reiseansicht">
             <div class="iphone-screen">
               <div class="iphone-island"></div>
@@ -446,22 +457,8 @@
         <span class="section-tag" data-i18n="widgets_tag">DEINE REISE AUF DEM HOMESCREEN · ホーム画面</span>
         <h2 class="section-title" data-i18n="widgets_title">Deine Reise immer im Blick.</h2>
         <p class="section-description" data-i18n="widgets_desc">
-          Das neue Reise-Widget mit Japan-Karte und Gesamtkilometern, dein Reiseticket und deine Stempel-Sammelkarte: Die Widgets bringen deine Reise direkt auf den Homescreen. Hell oder dunkel, ganz wie dein iPhone.
+          Das neue Reise-Widget mit Japan-Karte und Gesamtkilometern, dein Reiseticket und deine Stempel-Sammelkarte: Die Widgets bringen deine Reise direkt auf den Homescreen.
         </p>
-
-        <!-- Hell / Dunkel: tauscht alle Widget-Bilder und den Hintergrund der Buehne -->
-        <div class="widget-theme-toggle-wrap">
-          <div class="widget-theme-toggle" role="group" aria-label="Widget-Design auswählen">
-            <button class="widget-theme-btn active" data-theme="light" id="widgetThemeLight" aria-pressed="true">
-              <span class="theme-icon">🌸</span>
-              <span class="theme-label" data-i18n="theme_washi_btn">Washi (Hell)</span>
-            </button>
-            <button class="widget-theme-btn" data-theme="dark" id="widgetThemeDark" aria-pressed="false">
-              <span class="theme-icon">🌙</span>
-              <span class="theme-label" data-i18n="theme_sumi_btn">Sumi (Dunkel)</span>
-            </button>
-          </div>
-        </div>
       </div>
 
       <!-- Widget-Haufen: je Widget-Art eines, leicht gedreht uebereinander. Ein Tipp holt
@@ -469,8 +466,7 @@
       <div class="wpile" id="widgetStage">
         <img class="wh-img wpile-item wp-large" data-widget="widget_calendar_large" src="assets/images/widgets/de/widget_calendar_large_light.png?v=20261013" width="1134" height="1182" alt="Stempelbuch-Widget, groß" loading="lazy" decoding="async">
         <img class="wh-img wpile-item wp-ticket-m" data-widget="widget_ticket_medium" src="assets/images/widgets/de/widget_ticket_medium_light.png?v=20261013" width="1134" height="530" alt="Reiseticket-Widget, mittel" loading="lazy" decoding="async">
-        <img class="wh-img wpile-item wp-reise-m only-light" data-widget="widget_reise_medium" src="assets/images/widgets/de/widget_reise_medium_light.png?v=20261013" width="1134" height="530" alt="Deine-Reise-Widget, mittel" loading="lazy" decoding="async">
-        <img class="wh-img wpile-item wp-week-m only-dark" data-widget="widget_week_medium" src="assets/images/widgets/de/widget_week_medium_dark.png?v=20261013" width="1134" height="530" alt="Schritte-Woche-Widget, mittel" loading="lazy" decoding="async">
+        <img class="wh-img wpile-item wp-reise-m" data-widget="widget_reise_medium" src="assets/images/widgets/de/widget_reise_medium_light.png?v=20261013" width="1134" height="530" alt="Deine-Reise-Widget, mittel" loading="lazy" decoding="async">
         <img class="wh-img wpile-item wp-cal-s" data-widget="widget_calendar_small" src="assets/images/widgets/de/widget_calendar_small_light.png?v=20261013" width="530" height="530" alt="Stempelbuch-Widget, klein" loading="lazy" decoding="async">
       </div>
     </div>
