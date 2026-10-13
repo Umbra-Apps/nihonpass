@@ -125,13 +125,13 @@ const translations = {
     // Personalisierung & Eigene Handschrift
     custom_tag: "TRADITION & EIGENE HANDSCHRIFT · 絵馬と落款",
     custom_title: "Dein Pass. Deine Handschrift.",
-    custom_desc: "Gestalte deine Reise so einzigartig wie deine Schritte. Von der traditionellen Ema-Wunschtafel vor dem Start bis zum handgemalten Siegel in deinem Reisepass.",
-    custom_b1_title: "Ema-Wunschtafel vor dem Start",
-    custom_b1_desc: "Wie am Schrein: Halte dein Vorhaben mit Pinsel und Tusche auf der Holztafel fest. Deine Wunschtafel begleitet dich bis zur Abschluss-Urkunde.",
-    custom_b2_title: "Dein handgemaltes Hanko-Siegel",
-    custom_b2_desc: "Gestalte dein persönliches Namenssiegel wie ein traditioneller Schreiber – als offizieller roter Stempel oben rechts auf deinem Reisepass.",
-    custom_b3_title: "Individuelle Tagesstempel im Kalender",
-    custom_b3_desc: "Jeder Tag, an dem du dein Schrittziel erreichst, wird mit deinem eigens handgemalten Stempel im Aktivitätskalender belohnt.",
+    custom_desc: "In Japan beginnt jede echte Reise mit einer persönlichen Geste. Statt vorgefertigter Profile nimmst du in NihonPass Pinsel und Tusche in die Hand: Du zeichnest dein eigenes Namenssiegel, schreibst Wünsche auf Holztafeln und machst deinen Reisepass zu etwas ganz Eigenem.",
+    custom_b1_title: "Eine Ema-Holztafel vor dem ersten Schritt",
+    custom_b1_desc: "Genau wie an japanischen Schreinen: Bevor es losgeht, malst du deinen Wunsch mit schwarzer Tusche auf eine kleine Holztafel. Sie hängt an deiner Reise und begleitet dich bis zur Urkunde am Ziel.",
+    custom_b2_title: "Dein persönliches Namenssiegel",
+    custom_b2_desc: "Ob eine Initiale, ein schnelles Kanji oder ein eigenes Symbol: Male mit dem Pinsel dein rotes Hanko-Siegel. Es wird oben rechts auf deinen Reisepass gestempelt – in echtem Zinnoberrot.",
+    custom_b3_title: "Selbstgemalte Stempel für jeden Tag",
+    custom_b3_desc: "Erreichst du dein Tagesziel, gibt es kein trockenes Häkchen: Du kannst bis zu fünf eigene Stempel gestalten und sogar kurze Notizen zu deinen Spaziergängen im Kalender hinterlassen.",
 
     // Companions (Exakt aus UserProfile.swift)
     comp_tag: "DEINE BEGLEITER · 相棒",
@@ -389,13 +389,13 @@ const translations = {
     // Customization & Brush
     custom_tag: "TRADITION & PERSONAL TOUCH · 絵馬と落款",
     custom_title: "Your Pass. Your Signature.",
-    custom_desc: "Make your journey as unique as your steps. From the traditional Ema wishing plaque before you start to a hand-drawn seal in your travel pass.",
-    custom_b1_title: "Ema Wishing Plaque at the Start",
-    custom_b1_desc: "Just like at a Japanese shrine: paint your intention on the wooden plaque with ink and brush. It stays with you all the way to your completion certificate.",
-    custom_b2_title: "Your Hand-Drawn Hanko Seal",
-    custom_b2_desc: "Craft your personal name seal like a traditional calligrapher – stamped in vermilion red at the top right of your passport.",
-    custom_b3_title: "Custom Daily Stamps in Your Calendar",
-    custom_b3_desc: "Every day you reach your daily step goal, your handcrafted stamp seals the day in your activity calendar.",
+    custom_desc: "In Japan, every journey begins with a personal touch. Instead of generic profiles, pick up a virtual brush and ink in NihonPass: draw your own red seal, write wishes on wooden plaques, and make your travel pass truly your own.",
+    custom_b1_title: "An Ema wooden plaque before your first step",
+    custom_b1_desc: "Just like at Japanese shrines: before setting out, paint your wish on a small wooden plaque with black ink. It hangs by your journey all the way to your certificate.",
+    custom_b2_title: "Your personal name seal (Hanko)",
+    custom_b2_desc: "An initial, a simple Kanji, or your own motif: draw your red Hanko seal with a brush. It stamps the top right of your passport in traditional vermilion.",
+    custom_b3_title: "Hand-drawn stamps for every day",
+    custom_b3_desc: "Hitting your step goal shouldn't feel like ticking off a checklist. Paint up to five custom stamps and add quiet daily notes to your walks in your calendar.",
 
     // Companions
     comp_tag: "YOUR COMPANIONS · 相棒",
