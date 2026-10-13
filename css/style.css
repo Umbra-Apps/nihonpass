@@ -4192,7 +4192,8 @@ button {
 
 .wp-large    { width: 36%; left: 8%;  top: 8%;  --r: -5deg;   z-index: 1; }
 .wp-ticket-m { width: 48%; left: 40%; top: 2%;  --r: 3deg;    z-index: 2; }
-.wp-week-m   { width: 48%; left: 44%; top: 30%; --r: -2.5deg; z-index: 4; }
+.wp-steps-s  { width: 23%; left: 44%; top: 28%; --r: -2.5deg; z-index: 4; }
+.wp-week-m   { display: none; }
 .wp-reise-m  { width: 48%; left: 36%; top: 56%; --r: 2deg;    z-index: 3; }
 .wp-cal-s    { display: none; }
 
@@ -4203,10 +4204,11 @@ button {
   }
 
   .wp-large    { display: none; }
-  .wp-ticket-m { width: 84%; left: 2%;  top: 2%;  --r: -2.5deg; z-index: 2; }
-  .wp-cal-s    { display: block; width: 44%; left: 52%; top: 20%; --r: 6deg; z-index: 3; }
-  .wp-week-m   { width: 84%; left: 12%; top: 40%; --r: 2.5deg;  z-index: 4; }
-  .wp-reise-m  { width: 84%; left: 2%;  top: 68%; --r: -2deg;   z-index: 2; }
+  .wp-ticket-m { width: 84%; left: 8%;  top: 2%;  --r: -2.5deg; z-index: 2; }
+  .wp-cal-s    { display: block; width: 40%; left: 6%;  top: 36%; --r: -3deg; z-index: 3; }
+  .wp-steps-s  { display: block; width: 40%; left: 52%; top: 34%; --r: 3.5deg; z-index: 4; }
+  .wp-week-m   { display: none; }
+  .wp-reise-m  { width: 84%; left: 8%;  top: 68%; --r: -2deg;   z-index: 2; }
 }
 
 /* ==========================================================================
