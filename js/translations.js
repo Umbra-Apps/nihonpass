@@ -157,7 +157,7 @@ const translations = {
     // Home Screen Widgets
     widgets_tag: "DEINE REISE AUF DEM HOMESCREEN · ホーム画面",
     widgets_title: "Deine Reise immer im Blick.",
-    widgets_desc: "Das neue Reise-Widget mit Japan-Karte und Gesamtkilometern, dein Reiseticket und deine Stempel-Sammelkarte: Die Widgets bringen deine Reise direkt auf den Homescreen.",
+    widgets_desc: "Das 7-Tage-Stempel-Widget, das Reise-Widget mit Japan-Karte, dein Reiseticket und deine Stempel-Sammelkarte: Die Widgets bringen deine Reise direkt auf den Homescreen.",
     plan_founder_note: "Wer bis 31.12. abschließt, behält 19,99 € pro Jahr, solange das Abo läuft. Danach kostet das Jahresabo 24,99 €.",
     plan_switch_yearly: "Jährlich",
     plan_switch_monthly: "Monatlich",
@@ -421,7 +421,7 @@ const translations = {
     // Home Screen Widgets
     widgets_tag: "YOUR JOURNEY ON YOUR HOME SCREEN · ホーム画面",
     widgets_title: "Your Journey Always in View.",
-    widgets_desc: "The new journey widget featuring the Japan map and total kilometres, your journey ticket and your stamp collection card: bringing your journey straight to your Home Screen.",
+    widgets_desc: "The new 7-day stamp widget, the journey widget featuring the Japan map and total kilometres, your journey ticket and your stamp collection card: bringing your journey straight to your Home Screen.",
     plan_founder_note: "Subscribe by December 31 and keep $19.99 per year for as long as you stay subscribed. After that the annual pass costs $24.99.",
     plan_switch_yearly: "Yearly",
     plan_switch_monthly: "Monthly",
@@ -685,7 +685,7 @@ const translations = {
     // Home Screen Widgets
     widgets_tag: "ホーム画面で旅を楽しむ · HOME SCREEN",
     widgets_title: "あなたの旅を、いつでも手元に。",
-    widgets_desc: "日本地図と総移動距離を表示する新しい旅ウィジェット、記念乗車券、そしてスタンプ収集カード。ウィジェットで旅をホーム画面に。",
+    widgets_desc: "新しい7日間の歩数スタンプ、日本地図と総移動距離の旅ウィジェット、記念乗車券、そしてスタンプ収集カード。ウィジェットで旅をホーム画面に。",
     plan_founder_note: "12月31日までにご登録の方は、継続中ずっと年額¥3,000のまま。以降の新規登録は年額¥4,000になります。",
     plan_switch_yearly: "年額",
     plan_switch_monthly: "月額",

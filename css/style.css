@@ -4169,8 +4169,8 @@ button {
    Breite = Anteil der Buehnenbreite, Hoehe folgt dem Seitenverhaeltnis des Bildes. */
 .wpile {
   position: relative;
-  max-width: 860px;
-  aspect-ratio: 860 / 460;
+  max-width: 880px;
+  aspect-ratio: 880 / 480;
   margin: 40px auto 8px;
 }
 
@@ -4190,21 +4190,23 @@ button {
   transform: rotate(0deg) translateY(-6px) scale(1.03);
 }
 
-.wp-large    { width: 36%; left: 10%; top: 12%; --r: -5deg; z-index: 1; }
-.wp-ticket-m { width: 50%; left: 40%; top: 4%;  --r: 3deg;  z-index: 3; }
-.wp-reise-m  { width: 50%; left: 33%; top: 50%; --r: -2deg; z-index: 2; }
+.wp-large    { width: 36%; left: 8%;  top: 8%;  --r: -5deg;   z-index: 1; }
+.wp-ticket-m { width: 48%; left: 40%; top: 2%;  --r: 3deg;    z-index: 2; }
+.wp-week-m   { width: 48%; left: 44%; top: 30%; --r: -2.5deg; z-index: 4; }
+.wp-reise-m  { width: 48%; left: 36%; top: 56%; --r: 2deg;    z-index: 3; }
 .wp-cal-s    { display: none; }
 
 @media (max-width: 760px) {
   .wpile {
-    aspect-ratio: 343 / 380;
+    aspect-ratio: 343 / 460;
     margin-top: 28px;
   }
 
   .wp-large    { display: none; }
-  .wp-ticket-m { width: 84%; left: 0%;  top: 2%;  --r: -2deg; z-index: 3; }
-  .wp-cal-s    { display: block; width: 44%; left: 54%; top: 28%; --r: 6deg; z-index: 4; }
-  .wp-reise-m  { width: 84%; left: 14%; top: 62%; --r: 2deg;  z-index: 2; }
+  .wp-ticket-m { width: 84%; left: 2%;  top: 2%;  --r: -2.5deg; z-index: 2; }
+  .wp-cal-s    { display: block; width: 44%; left: 52%; top: 20%; --r: 6deg; z-index: 3; }
+  .wp-week-m   { width: 84%; left: 12%; top: 40%; --r: 2.5deg;  z-index: 4; }
+  .wp-reise-m  { width: 84%; left: 2%;  top: 68%; --r: -2deg;   z-index: 2; }
 }
 
 /* ==========================================================================
