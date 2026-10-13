@@ -72,17 +72,17 @@ function setLanguage(lang) {
   // Lokalisierte Screenshots tauschen (DE / EN / JA)
   document.querySelectorAll('[data-i18n-src]').forEach(img => {
     const screenKey = img.getAttribute('data-i18n-src');
-    img.src = `assets/images/screenshots/${lang}/${screenKey}.jpg?v=20261013_v3`;
+    img.src = `assets/images/screenshots/${lang}/${screenKey}.jpg?v=20261013_v4`;
   });
 
   // Lokalisierte Apple Watch Mockup tauschen (DE / EN / JA)
   const duoWatch = document.getElementById('duoWatchMockup');
   if (duoWatch) {
-    let watchSrc = 'assets/images/watch/watch_station_pass_gold.png?v=20261013_v3';
+    let watchSrc = 'assets/images/watch/watch_station_pass_gold.png?v=20261013_v4';
     if (lang === 'ja') {
-      watchSrc = 'assets/images/watch/watch_station_pass_gold_ja.png?v=20261013_v3';
+      watchSrc = 'assets/images/watch/watch_station_pass_gold_ja.png?v=20261013_v4';
     } else if (lang === 'en') {
-      watchSrc = 'assets/images/watch/watch_station_pass_gold_en.png?v=20261013_v3';
+      watchSrc = 'assets/images/watch/watch_station_pass_gold_en.png?v=20261013_v4';
     }
     duoWatch.src = watchSrc;
   }
@@ -91,7 +91,7 @@ function setLanguage(lang) {
   document.querySelectorAll('[data-i18n-href]').forEach(link => {
     const screenKey = link.getAttribute('data-i18n-href');
     // Presse-Downloads in voller Aufloesung (1320 x 2868)
-    link.href = `assets/images/screenshots/${lang}/gross/${screenKey}.jpg?v=20261013_v3`;
+    link.href = `assets/images/screenshots/${lang}/gross/${screenKey}.jpg?v=20261013_v4`;
   });
 
   // Widget-Bilder gibt es je Sprache (hell und dunkel)
