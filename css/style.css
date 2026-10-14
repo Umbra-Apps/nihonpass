@@ -148,7 +148,9 @@ button {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #FBF7EF;
+  background: rgba(251, 247, 239, 0.88);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
   border-bottom: 1px solid var(--border-subtle);
   box-shadow: 0 4px 20px rgba(45, 30, 15, 0.04);
   padding-top: env(safe-area-inset-top, 0px);
@@ -250,6 +252,7 @@ button {
   transition: var(--transition);
   position: relative;
   padding: 6px 0;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -2925,9 +2928,57 @@ button {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN: iPad & Tablets (768px bis 1024px)
+   TABLET & iPAD NAVIGATION (801px bis 1160px)
+   Feinabstimmung für 11-Zoll iPads im Hochformat & Tablets
    ========================================================================== */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 801px) and (max-width: 1160px) {
+  .nav-wrap {
+    height: 64px;
+  }
+
+  .nav-menu {
+    gap: clamp(8px, 1.3vw, 16px);
+  }
+
+  .nav-link {
+    font-size: clamp(0.78rem, 1vw, 0.88rem);
+    white-space: nowrap;
+    padding: 6px 2px;
+  }
+
+  /* Auf Tablets kompakteres Logo ohne Sub-Kanji */
+  .brand-logo {
+    gap: 8px;
+  }
+  .brand-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+  }
+  .brand-name {
+    font-size: 1.15rem;
+  }
+  .brand-kanji {
+    display: none;
+  }
+
+  /* Auf Tablets den redundanten 'Laden'-Knopf ausblenden, um Platz für die 7 Menüpunkte zu schaffen */
+  .nav-actions {
+    gap: 8px;
+  }
+  .nav-actions .btn-cta-small {
+    display: none !important;
+  }
+  .nav-actions .lang-btn {
+    padding: 4px 8px;
+    font-size: 0.72rem;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN: iPad & Tablets (801px bis 1024px)
+   ========================================================================== */
+@media (min-width: 801px) and (max-width: 1024px) {
   .container {
     padding: 0 24px;
   }
@@ -3273,10 +3324,10 @@ button {
   }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN: iPhone & Mobile (< 900px)
-   Speziell optimiert für elegante Darstellung auf Smartphones & Tablets
+   RESPONSIVE DESIGN: iPhone & Mobile (< 800px)
+   Speziell optimiert für elegante Darstellung auf Smartphones
    ========================================================================== */
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .container {
     padding: 0 16px;
   }
@@ -4362,7 +4413,7 @@ button {
   overflow: hidden;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 801px) {
   .custom-streak-grid {
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -4370,7 +4421,7 @@ button {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .custom-streak-grid {
     grid-template-columns: 1fr;
     gap: 32px;
