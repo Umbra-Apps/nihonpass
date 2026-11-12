@@ -108,7 +108,7 @@ const translations = {
     streak_desc: "Kein Mensch kann jeden Tag Kilometer abreißen. Wenn du sonntags lieber auf der Couch bleibst, schützen zwei Ruhetage pro Woche automatisch deine Serie.",
     stamp_tag: "REISETAGEBUCH & STEMPEL · 御朱印",
     stamp_title: "Dein Reisetagebuch. Echte Siegel ohne Leistungsdruck.",
-    stamp_desc: "Mit jedem erreichten Tagesziel stempelst du deinen Kalender mit dem roten 歩-Siegel ab. Am Monatsende siehst du schwarz auf weiß, wie viel du zu Fuß geschafft hast.",
+    stamp_desc: "Mit jedem erreichten Tagesziel stempelst du deinen Kalender mit deinem Siegel ab und hältst in bis zu 280 Zeichen fest, was heute besonders war. Alle Einträge lassen sich chronologisch im Reisetagebuch durchblättern, filtern und durchsuchen.",
     fanned_badge_album: "Goshuin-Album",
     rest_day_active: "Ruhetag aktiv",
     rest_day_sub: "Serie bleibt geschützt",
@@ -122,17 +122,19 @@ const translations = {
     streak_b3_desc: "Kein penetrantes Gebimmel. Höchstens eine kurze, freundliche Nachricht wie „Gion erreicht“ oder „Nur noch 1,1 km bis Arashiyama“. Ruhig und unaufdringlich.",
     stamp_b3_title: "Eine echte Goshuin-Sammelkarte",
     stamp_b3_desc: "Wie in traditionellen japanischen Tempeln sammelst du rote Hanko-Siegel und kleine Geschichten auf deiner Sammelkarte zu jedem erreichten Meilenstein.",
+    stamp_b4_title: "Gemeinsam mit Freunden unterwegs",
+    stamp_b4_desc: "Verbindet euch über euren Pass-Code: Nach gegenseitiger Annahme seht ihr einander auf der Japankarte und trefft den winkenden Begleiter eurer Freunde direkt entlang der Strecke.",
 
     // Personalisierung & Eigene Handschrift
     custom_tag: "TRADITION & EIGENE HANDSCHRIFT · 絵馬と落款",
     custom_title: "Dein Pass. Deine Handschrift.",
-    custom_desc: "In Japan beginnt jede echte Reise mit einer persönlichen Geste. Statt vorgefertigter Profile nimmst du in NihonPass Pinsel und Tusche in die Hand: Du zeichnest dein eigenes Namenssiegel, schreibst Wünsche auf Holztafeln und machst deinen Reisepass zu etwas ganz Eigenem.",
+    custom_desc: "In Japan beginnt jede echte Reise mit einer persönlichen Geste. Statt vorgefertigter Profile nimmst du in NihonPass Pinsel und Tusche in die Hand: Du zeichnest dein eigenes Namenssiegel, wählst deinen Pass-Einband und machst deinen Reisepass zu etwas ganz Eigenem.",
     custom_b1_title: "Eine Ema-Holztafel vor dem ersten Schritt",
     custom_b1_desc: "Genau wie an japanischen Schreinen: Bevor es losgeht, malst du deinen Wunsch mit schwarzer Tusche auf eine kleine Holztafel. Sie hängt an deiner Reise und begleitet dich bis zur Urkunde am Ziel.",
-    custom_b2_title: "Dein persönliches Namenssiegel",
-    custom_b2_desc: "Ob eine Initiale, ein schnelles Kanji oder ein eigenes Symbol: Male mit dem Pinsel dein rotes Hanko-Siegel. Es wird oben rechts auf deinen Reisepass gestempelt – in echtem Zinnoberrot.",
-    custom_b3_title: "Selbstgemalte Stempel & Raum für Gedanken",
-    custom_b3_desc: "Erreichst du dein Tagesziel, gibt es kein trockenes Häkchen: Du besiegelst den Tag mit bis zu fünf selbstgemalten Stempeln – und hältst in ein paar Zeilen fest, was dich heute bewegt hat. Ein stiller Gedanke, ein bewusster Moment oder einfach das gute Gefühl, draußen gewesen zu sein.",
+    custom_b2_title: "Dein persönliches Namenssiegel & Pass-Einband",
+    custom_b2_desc: "Ob rund, eckig oder ganz ohne Rahmen: Male mit dem Pinsel dein eigenes Hanko-Siegel und wähle im Profil deinen Pass-Einband (Schiefer, Karmin, Zinnober oder Kaisergold) sowie deinen Hell- oder Dunkelmodus.",
+    custom_b3_title: "Selbstgemalte Stempel & chronologisches Tagebuch",
+    custom_b3_desc: "Erreichst du dein Tagesziel, gibt es kein trockenes Häkchen: Du besiegelst den Tag mit bis zu fünf selbstgemalten Tagesstempeln und hältst deine Gedanken in bis zu 280 Zeichen fest – jederzeit durchsuchbar in deinem Reisetagebuch und sicher in iCloud gespeichert.",
 
     // Companions (Exakt aus UserProfile.swift)
     comp_tag: "DEINE BEGLEITER · 相棒",
@@ -239,6 +241,8 @@ const translations = {
     faq_a3: "Ja, fast alles. Deine Schritte kommen aus Apple Health auf deinem iPhone, und Routen, Stempel, Begleiter und Geschichten sind in der App gespeichert. Nur die Karte lädt ihre Kacheln von Apple Karten: Ohne Netz siehst du dort nur, was schon geladen war. Deine Schritte zählen trotzdem, und alles holt die App nach, sobald du wieder online bist.",
     faq_q4: "Was passiert nach den 7 kostenlosen Testtagen?",
     faq_a4: "Wenn du während der 7 Tage in den Einstellungen deiner Apple-ID kündigst, zahlst du keinen Cent. Und egal wie du dich entscheidest: Die gesamte Kyoto-Starter-Route bleibt für dich immer zu 100 % kostenlos erhalten.",
+    faq_q5: "Wie funktioniert das gemeinsame Laufen mit Freunden?",
+    faq_a5: "Im Profil teilt ihr euren Pass-Code und sendet euch eine Anfrage. Sobald ihr beide bestätigt habt, seht ihr euren aktuellen Etappenfortschritt und den Begleiter des anderen über Apple iCloud – ganz ohne GPS-Standorte oder echte Kontaktdaten.",
 
     // App-Einblicke (Original Screenshots)
     gallery_tag: "ORIGINAL APP-EINBLICKE · アプリの画面",
@@ -373,7 +377,7 @@ const translations = {
     streak_desc: "Rest is part of any real journey. Your stamp card fills up day by day, and two days off per week are built right in.",
     stamp_tag: "TRAVEL JOURNAL & STAMPS · 御朱印",
     stamp_title: "Your Travel Journal. Authentic seals without pressure.",
-    stamp_desc: "With every reached daily goal, you seal your calendar with the red 歩 stamp. At month's end, you see exactly how far your feet carried you.",
+    stamp_desc: "Every day you hit your goal, seal your calendar with your stamp and jot down up to 280 characters about your day. Browse, filter, and search every memory chronologically in your travel diary.",
     fanned_badge_album: "Goshuin Album",
     rest_day_active: "Rest Day Active",
     rest_day_sub: "Streak stays protected",
@@ -387,17 +391,19 @@ const translations = {
     streak_b3_desc: "No aggressive pinging: at most one friendly update like “Arrived at Gion” or “Only 1.1 km to Arashiyama”. Quiet and peaceful.",
     stamp_b3_title: "An authentic Goshuin stamp collection card",
     stamp_b3_desc: "Just like at Japanese temples and shrines, collect traditional Hanko stamps and quiet cultural stories on your collection card for every milestone you reach.",
+    stamp_b4_title: "Walk Together with Friends",
+    stamp_b4_desc: "Connect using your pass code: once accepted by both sides, spot each other on the Japan overview map and meet your friend’s waving companion right along the trail.",
 
     // Customization & Brush
     custom_tag: "TRADITION & PERSONAL TOUCH · 絵馬と落款",
     custom_title: "Your Pass. Your Signature.",
-    custom_desc: "In Japan, every journey begins with a personal touch. Instead of generic profiles, pick up a virtual brush and ink in NihonPass: draw your own red seal, write wishes on wooden plaques, and make your travel pass truly your own.",
+    custom_desc: "In Japan, every journey begins with a personal touch. Instead of generic profiles, pick up a virtual brush and ink in NihonPass: draw your own red seal, pick your pass cover style, and make your travel pass truly yours.",
     custom_b1_title: "An Ema wooden plaque before your first step",
     custom_b1_desc: "Just like at Japanese shrines: before setting out, paint your wish on a small wooden plaque with black ink. It hangs by your journey all the way to your certificate.",
-    custom_b2_title: "Your personal name seal (Hanko)",
-    custom_b2_desc: "An initial, a simple Kanji, or your own motif: draw your red Hanko seal with a brush. It stamps the top right of your passport in traditional vermilion.",
-    custom_b3_title: "Custom stamps & a quiet space for your thoughts",
-    custom_b3_desc: "Reaching your daily goal shouldn't feel like ticking off a checklist: seal the day with up to five hand-drawn stamps – and capture what moved you today in a few lines. A quiet thought, a mindful moment, or simply the fresh feeling of having been outside.",
+    custom_b2_title: "Your Personal Hanko Seal & Pass Cover",
+    custom_b2_desc: "Round, square, or frameless: draw your own brush-ink seal and customize your Runner Pass cover (Slate, Carmine, Vermilion, or Imperial Gold) plus Light, Dark, or System appearance.",
+    custom_b3_title: "Custom Day Stamps & Searchable Travel Diary",
+    custom_b3_desc: "Reaching your daily goal shouldn't feel like ticking off a checklist: seal the day with up to five hand-drawn day stamps and capture up to 280 characters—searchable anytime in your chronological diary and safely backed up in iCloud.",
 
     // Companions
     comp_tag: "YOUR COMPANIONS · 相棒",
@@ -504,6 +510,8 @@ const translations = {
     faq_a3: "Almost entirely. Your steps come from Apple Health on your iPhone, and trails, stamps, companions and stories are stored in the app. Only the map loads its tiles from Apple Maps: without a connection you see what was already loaded. Your steps still count, and the app catches up as soon as you are back online.",
     faq_q4: "What happens after the 7-day free trial?",
     faq_a4: "If you cancel during the 7 days via your Apple ID settings, you won’t be charged a cent. Either way, the entire Kyoto starter route remains 100% free for life.",
+    faq_q5: "How does walking with friends work?",
+    faq_a5: "Share your pass code in your profile and send a friend request. Once accepted on both sides, you can see each other’s companion and trail progress via Apple iCloud—with zero GPS locations or contact details ever shared.",
 
     // App Preview
     gallery_tag: "IN-APP PREVIEW · アプリの画面",
@@ -638,7 +646,7 @@ const translations = {
     streak_desc: "無理のない習慣には休息も欠かせません。スタンプカードに毎日の印が増え、週に2日までの休養日なら連続記録が守られます。",
     stamp_tag: "旅日記と御朱印 · 旅の証",
     stamp_title: "あなたの旅日記。競わずに集まる本物の印。",
-    stamp_desc: "休息も旅の大切な一部。日々の達成が朱色の判子となり、御朱印帳には訪れた神社仏閣の記録が美しく刻まれます。",
+    stamp_desc: "休息も旅の大切な一部。日々の達成で押されるスタンプに加え、その日の出来事を最大280文字まで書きとめられます。旅日記は時系列で見返し、検索や絞り込みも可能です。",
     fanned_badge_album: "御朱印帳",
     rest_day_active: "休息日適用中",
     rest_day_sub: "連続記録を保護",
@@ -652,17 +660,19 @@ const translations = {
     streak_b3_desc: "押し付けがましい通知はありません。「祇園に到着しました」「嵐山まであと1.1km」など、そっと旅情を届けるだけです。",
     stamp_b3_title: "本物の御朱印・スタンプ収集カード",
     stamp_b3_desc: "日本の寺社のように、到達した宿場や名所の伝統的な御朱印と土地の物語を収集カードに集められます。",
+    stamp_b4_title: "友達と一緒に街道を歩く",
+    stamp_b4_desc: "旅券番号（パスコード）でつながって申請を承認し合うと、日本地図や街道上で互いの場所と手を振る相棒が見られます。",
 
     // Customization & Brush
     custom_tag: "伝統と自分だけの印 · 絵馬と落款",
     custom_title: "自分だけの印を、旅の手帳に。",
-    custom_desc: "歩き出す前の絵馬奉納から、旅の手帳を彩る手描きの落款まで。一歩一歩の旅路を、あなただけの筆跡で残せます。",
+    custom_desc: "歩き出す前の絵馬奉納から、手描きの落款、好みの旅券の表紙まで。一歩一歩の旅路を、あなたらしく彩れます。",
     custom_b1_title: "旅のはじまりに、絵馬に願いを",
     custom_b1_desc: "神社で絵馬を奉納するように、歩き出す前に筆と墨で願いを描けます。絵馬は完歩の証書まで旅をともにします。",
-    custom_b2_title: "あなただけの手描き落款（はんこ）",
-    custom_b2_desc: "書家のように自分だけの落款を仕立て、旅券（パス）の右上に朱色の印を押すことができます。",
-    custom_b3_title: "歩いた日を彩る日々の印",
-    custom_b3_desc: "歩数目標を達成した日は、自分で描いたスタンプでカレンダーを楽しく埋めていけます。",
+    custom_b2_title: "手描き落款と、選べる旅券の表紙",
+    custom_b2_desc: "丸・四角・枠なしから選べる手描きの落款に加え、旅券の表紙カラー（スレート、カーマイン、朱色、黄金）やライト／ダーク外観もプロフィールから自由に設定できます。",
+    custom_b3_title: "日々のスタンプ＆検索できる旅日記",
+    custom_b3_desc: "最大5つの手描き日替わりスタンプでカレンダーを彩り、1日最大280文字のメモを残せます。記録はiCloudに安全に同期され、時系列の旅日記からいつでも振り返れます。",
 
     // Companions (Exakt aus UserProfile.swift)
     comp_tag: "旅の相棒 · COMPANIONS",
@@ -772,6 +782,8 @@ const translations = {
     faq_a3: "ほとんどの機能が使えます。歩数はiPhoneのヘルスケアから読み込み、街道ルート・御朱印・相棒・宿場の解説はアプリに内蔵されています。地図の表示だけはAppleマップから読み込むため、オフライン中は読み込み済みの範囲のみ表示されます。歩数はその間も記録され、オンラインに戻ると反映されます。",
     faq_q4: "7日間の無料体験が終わるとどうなりますか？",
     faq_a4: "体験期間中に解約された場合、費用は一切かかりません。解約されない場合はApple ID経由で定期購入が継続します。なお、京都ルートは解約後もずっと無料でお使いいただけます。",
+    faq_q5: "友達と一緒に歩く機能はどのように使いますか？",
+    faq_a5: "プロフィールの旅券番号（パスコード）を共有してフレンド申請を送り、互いに承認すると日本地図や街道マップ上で相棒と進捗を見られるようになります。GPS位置情報や個人情報は一切共有されません。",
 
     // アプリ画面
     gallery_tag: "アプリの画面 · 旅の記録",
